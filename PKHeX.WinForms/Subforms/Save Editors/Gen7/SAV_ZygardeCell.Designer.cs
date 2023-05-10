@@ -1,4 +1,4 @@
-﻿namespace PKHeX.WinForms
+namespace PKHeX.WinForms
 {
     partial class SAV_ZygardeCell
     {
@@ -67,7 +67,7 @@
             // dgv_ref
             // 
             dgv_ref.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dgv_ref.HeaderText = "Ref";
+            dgv_ref.HeaderText = "序号";
             dgv_ref.Name = "dgv_ref";
             dgv_ref.ReadOnly = true;
             dgv_ref.Width = 49;
@@ -75,7 +75,7 @@
             // dgv_location
             // 
             dgv_location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dgv_location.HeaderText = "Location";
+            dgv_location.HeaderText = "地点";
             dgv_location.Name = "dgv_location";
             dgv_location.ReadOnly = true;
             dgv_location.Width = 78;
@@ -83,7 +83,7 @@
             // dgv_val
             // 
             dgv_val.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            dgv_val.HeaderText = "Value";
+            dgv_val.HeaderText = "状态";
             dgv_val.Name = "dgv_val";
             dgv_val.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -95,7 +95,7 @@
             B_Cancel.Name = "B_Cancel";
             B_Cancel.Size = new System.Drawing.Size(88, 27);
             B_Cancel.TabIndex = 1;
-            B_Cancel.Text = "Cancel";
+            B_Cancel.Text = "取消";
             B_Cancel.UseVisualStyleBackColor = true;
             B_Cancel.Click += B_Cancel_Click;
             // 
@@ -107,7 +107,7 @@
             B_Save.Name = "B_Save";
             B_Save.Size = new System.Drawing.Size(88, 27);
             B_Save.TabIndex = 2;
-            B_Save.Text = "Save";
+            B_Save.Text = "保存";
             B_Save.UseVisualStyleBackColor = true;
             B_Save.Click += B_Save_Click;
             // 
@@ -129,7 +129,7 @@
             L_Cells.Name = "L_Cells";
             L_Cells.Size = new System.Drawing.Size(84, 27);
             L_Cells.TabIndex = 4;
-            L_Cells.Text = "Stored:";
+            L_Cells.Text = "多面体细胞:";
             L_Cells.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // B_GiveAll
@@ -140,7 +140,7 @@
             B_GiveAll.Name = "B_GiveAll";
             B_GiveAll.Size = new System.Drawing.Size(88, 27);
             B_GiveAll.TabIndex = 5;
-            B_GiveAll.Text = "Collect All";
+            B_GiveAll.Text = "所有";
             B_GiveAll.UseVisualStyleBackColor = true;
             B_GiveAll.Click += B_GiveAll_Click;
             // 
@@ -152,7 +152,7 @@
             L_Collected.Name = "L_Collected";
             L_Collected.Size = new System.Drawing.Size(84, 27);
             L_Collected.TabIndex = 7;
-            L_Collected.Text = "Collected:";
+            L_Collected.Text = "已收集细胞:";
             L_Collected.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NUD_Collected
@@ -183,7 +183,7 @@
             MinimumSize = new System.Drawing.Size(604, 432);
             Name = "SAV_ZygardeCell";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "Cells/Sticker Editor";
+            Text = "多面体细胞/霸主贴纸修改";
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ((System.ComponentModel.ISupportInitialize)NUD_Cells).EndInit();
             ((System.ComponentModel.ISupportInitialize)NUD_Collected).EndInit();

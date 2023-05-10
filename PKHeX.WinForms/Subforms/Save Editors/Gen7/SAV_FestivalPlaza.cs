@@ -64,14 +64,14 @@ public partial class SAV_FestivalPlaza : Form
                 const string musical8note = "♪";
                 const string linedP = "₽"; //currency Ruble
                 res = new[] { //source:UltraMoon
-                    /* (SM)Pokémon House */"There's nothing funny about Nuggets.","The Power of science is awesome.","1, 2, and... Ta-da!","How's the future Champ today?","Why, you!","There! All happy and healthy!","Your Pokémon seems to be very happy!","No thanks!","Would you like to use Cut?","Saving...",
-                    /* (SM)Kanto Tent */"Well, I better get going!","Bonjour!","Smell ya later!","Sorry! Bad call!","You better have Burn Heal!","Hoo hah!","Pokémon are for battling!","Slowbro took a snooze...","Shades of your journey await!","You're 10,000 light-years from facing Brock!","Hey! Wait! Don't go out!","Hiya! I'm a Pokémon...","What do you want?","WHAT! This can't be!","Mew!","Be gone... Intruders...",
-                    /* (SM)Joht Tent */"Dragonite, Hymer Beam.","Spread the fun around.","I bought an adorable doll with your money.","What are you staring at?","I just don't understand.","Everyone is into Pokémon.","I'm going to train 24 hours a day!","I'm the real deal!","With a jolt of electricity...","For 10 years I chased Suicune.","I am just so deeply moved!","We have finally made it!","...But selling Slowpoke Tails?","Shaoooh!","Gyaaas!","you've taken your first step!",
-                    /* (SM)Hoenn Tent */"I'm just the strongest there is right now.","And confoundedly elegant!","You guys need some imagination.","You made a much bigger splash!","You ended up giving me a thrill!","So what am I talking about...","I'm not buying any Dolls.","Take your time and rest up!","Have a blast, Pokémon Trainers!","I got ashes in my eyelashes!","You're sharp!","Number of collisions: 5 times!","Please! Help me out!","I can't see Mirage Island today...","Hyahhn!","Shwahhn!",
-                    /* (SM)Sinnoh Tent */"Your will is overwhelming me!","This is it! My trump card!","Trying to monopolize Pokémon just isn't...","See? Just as analyzed.","Gagyagyaah!","Gugyugubah!","It's a "+linedP+"10 million fine if you're late!","I'm going to get tougher...","You'll never be able to stem the flow of time!","Please come!","Your team! I sense your strong aura!","What do you think you're doing?!","The ring is my rolling sea. "+musical8note,"I was just thinking out loud.","My code name, it is Looker.","It's not possible that I lose!",
-                    /* (SM)Unova Tent */"Knock it off!","Bravo! Excellent!!","I'll defeat the Champion.","You're about to feel my rage!","Nimbasa's Pokémon can dance a nimble bossa!","Use Bug-type Pokémon!","Stop!","People call me Mr. Medal!","Trainer, do your best, too!","See who's stronger!","Plasbad, for short!","I won't allow anyone to stop me!","I was expecting exactly that kind of move!","Bazzazzazzash!","Preeeeaah!","Haaahraaan!",
-                    /* (SM)Kalos Tent */"We'll become friends. "+musical8note,"I'll see you all later!","These people have a few screws loose...","I want to know what a \"Trainer\" is.","When I lose, I go out in style!","Let's give it all we've got!","Fantastic! Just fantastic!","Outstanding!","Try as hard as possible!","Stop right there!","That really hit me right here...","But this is adieu to you all.","You're just too much, you know?","Fool! You silly, unseeing child!","Xsaaaaaah!","Yvaaaaaar!",
-                    "I reached Festival Plaza Rank 100!",
+                     /* (SM)Pokémon House */"因为是大叔的金珠呀!","科学的力量,好厉害!","1, 2... 空!","喂- -,未来的冠军!","哦, 你啊!","大家都变得精力充沛了哦!","你的宝可梦看起来很幸福!","没什么.","要用居合斩切断吗?","正在写入记录...",
+                    /* (SM)Kanto Tent */"...我也该走了!","甭主!","回见!","糟糕,弄错了...","你准备好灼伤药了吧!","唔- -!哈- -!","宝可梦是为对战而存在的!","呆壳兽把头转向了一旁!","真新是纯白,开始的颜色!","你还差着10000光年呢!","喂- -! 等等- -! 等一下!","你好哟!我是宝可梦...","这是要干嘛!","什,什么! 这不可能!","妙!","走开...走开...",
+                    /* (SM)Joht Tent */"快龙,破坏光线!","哪个人来陪我玩玩啊?","我买好布偶了哦!","不要盯着别人看哦","不知道到底是怎么回事.","大家都在玩宝可梦.","今天开始24小时特训!","我是货真价实的!","用电击,一招解决...","我追寻水君10年了.","我被深深的感动了!","我们终于做到了- -!","竟然卖呆呆兽的尾巴...","啸- -!","奇- -亚斯!","迈出了第一步!",
+                    /* (SM)Hoenn Tent */"我是最强最厉害的呢.","优雅得令人嫉妒!","创造力不够哦!.","你就是那巨浪!","我被你麻到啦.","我在说什么...嘻嘻嘻...","我可没买什么布偶哦.","在这儿慢慢地歇着吧!","爆发吧!宝可梦训练家!","灰尘飞到我肺里了...","...厉害,做到了!","碰撞次数: 5 次!","快来救救我- -!","看不到幻之岛呢...","嘿啊啊- -嗯!","嘻啊啊- -嗯!",
+                    /* (SM)Sinnoh Tent */"我感受到了你热切的心情!","这就是! 我的王牌!","独占之类的,那样是不行的哦!","哇哦!正如我所料!","帕路帕路!!!","咕叽咕叭!!!","罚金 "+linedP+"1000000!","我要变强...","时光流逝,永不停歇!","一定,拜托了!","我从你们身上感受到了波导!","想对我的宝可梦干嘛?!","擂台就是我的大海~！ "+musical8note,"我大声的自言自语","没错, 我的代号是帅哥!","...我也会输!?",
+                    /* (SM)Unova Tent */"快住手啊!!","棒极了! 超棒!!","我要超越冠军.","我现在要发货了!","我的宝可梦在雷文很强很萌.","你用虫属性宝可梦吧.","站住!","人们叫我奖牌爷爷!","训练家也要加油哦!","来放手一搏吧!","等离子, 离远点!","没什么能阻拦我!","我早就料到了!","叭叭哩叭叭哩咻!","嗯叭尼~咔咔!","嗨啦啦啦!",
+                    /* (SM)Kalos Tent */"让我们做朋友吧♪ "+musical8note,"那么我们下次再见啦!","这些人蛮不讲理...","我想知道所谓训练家是什么.","即便溃败也要潇洒倒下.","燃烧吧,我的生命!","不错吧!很不错吧!","那个哦!就是那个!卓越非凡啊!","请等一下!","也就是说,是优点!","很遗憾,再见.","打是亲骂是爱哦.","这个白痴!","伊克夏!!","伊噶莱!!",
+                    "圆庆广场的等级是100!",
                 };
                 break;
         }
@@ -83,7 +83,7 @@ public partial class SAV_FestivalPlaza : Form
         DateTime dt = SAV.Festa.FestaDate ?? new DateTime(2000, 1, 1);
         CAL_FestaStartDate.Value = CAL_FestaStartTime.Value = dt;
 
-        string[] res2 = { "Rank 4: missions", "Rank 8: facility", "Rank 10: fashion", "Rank 20: rename", "Rank 30: special menu", "Rank 40: BGM", "Rank 50: theme Glitz", "Rank 60: theme Fairy", "Rank 70: theme Tone", "Rank 100: phrase", "Current Rank" };
+        string[] res2 = { "004: 游乐项目开放", "008: 可购买店铺", "010: 可购买衣服", "020: 圆庆广场命名", "030: 追加购买内容", "040: 可更换音乐", "050: 获得主题-豪华", "060: 获得主题-童话", "070: 获得主题-单调", "100: 台词-左栏第一个", "当前等级" };
         CLB_Reward.Items.Clear();
         CLB_Reward.Items.Add(res2[^1], (CheckState)RewardState[SAV.Festa.GetFestPrizeReceived(10)]); //add CurrentRank before const-rewards
         for (int i = 0; i < res2.Length - 1; i++)
@@ -92,36 +92,36 @@ public partial class SAV_FestivalPlaza : Form
         for (int i = 0; i < 7; i++)
             f[i] = new FestaFacility(SAV, i);
 
-        string[] res3 = { "Meet", "Part", "Moved", "Disappointed" };
+        string[] res3 = { "遇见", "离开", "带路", "失望" };
         CB_FacilityMessage.Items.Clear();
         CB_FacilityMessage.Items.AddRange(res3);
         string[] res5 =
         {
-            "Ace Trainer" + gendersymbols[1],
-            "Ace Trainer" + gendersymbols[0],
-            "Veteran" + gendersymbols[1],
-            "Veteran" + gendersymbols[0],
-            "Office Worker" + gendersymbols[0],
-            "Office Worker" + gendersymbols[1],
-            "Punk Guy",
-            "Punk Girl",
-            "Breeder" + gendersymbols[0],
-            "Breeder" + gendersymbols[1],
-            "Youngster",
-            "Lass",
+            "精英训练家" + gendersymbols[1],
+            "精英训练家" + gendersymbols[0],
+            "资深训练家" + gendersymbols[1],
+            "资深训练家" + gendersymbols[0],
+            "商务人士" + gendersymbols[0],
+            "商务人士" + gendersymbols[1],
+            "坏男孩",
+            "坏女孩",
+            "培育家" + gendersymbols[0],
+            "培育家" + gendersymbols[1],
+            "短裤小子",
+            "迷你裙",
         };
         CB_FacilityNPC.Items.Clear();
         CB_FacilityNPC.Items.AddRange(res5);
-        string[] res6 = { "Lottery", "Haunted", "Goody", "Food", "Bouncy", "Fortune", "Dye", "Exchange" };
+        string[] res6 = { "抽签屋", "恐怖屋", "礼品店", "美食摊", "气球摊", "占卜屋", "印染屋", "更换屋" };
         string[][] res7 = {
-            new[]{"BigDream","GoldRush","TreasureHunt"},
-            new[]{"GhostsDen","TrickRoom","ConfuseRay"},
-            new[]{"Ball","General","Battle","SoftDrink","Pharmacy"},
-            new[]{"Rare","Battle", "FriendshipCafé", "FriendshipParlor"},
-            new[]{"Thump","Clink","Stomp"},
-            new[]{"Kanto","Johto","Hoenn","Sinnoh","Unova","Kalos","Pokémon"},
-            new[]{"Red","Yellow","Green","Blue","Orange","NavyBlue","Purple","Pink"},
-            new[]{"Switcheroo"},
+            new[]{"大梦想","黄金涌现","狩猎宝物"},
+            new[]{"幽灵洞","戏法空间","奇异之光"},
+            new[]{"球球屋", "万万百货", "对战商店","饮料屋","药店"},
+            new[]{"神奇厨房","对战餐桌", "亲密咖啡", "亲密小吃吧"},
+            new[]{ "砰砰磅磅", "硬硬邦邦","走走跑跑"},
+            new[]{"关都帐篷","城都帐篷","丰缘帐篷","神奥帐篷","合众帐篷","卡洛斯帐篷","宝可梦帐篷"},
+            new[]{"红色","黄色","绿色","蓝色", "橙色", "靛色", "紫色", "粉色"},
+            new[]{"代理人对战"},
         };
 
         CB_FacilityType.Items.Clear();
@@ -152,7 +152,7 @@ public partial class SAV_FestivalPlaza : Form
         string[] types = { "GTS", "Wonder Trade", "Battle Spot", "Festival Plaza", "mission", "lottery shop", "haunted house" };
         string[] lvl = { "+", "++", "+++" };
         CB_LuckyResult.Items.Clear();
-        CB_LuckyResult.Items.Add("none");
+        CB_LuckyResult.Items.Add("任意");
         foreach (string type in types)
         {
             foreach (string lv in lvl)
@@ -181,7 +181,7 @@ public partial class SAV_FestivalPlaza : Form
 
     public enum FestivalPlazaFacilityColor : byte
     {
-        Red, Blue, Gold, Black, Purple, Yellow, Brown, Green, Orange, NavyBlue, Pink, White,
+        红色, 蓝色, 金色, 黑色, 紫色, 黄色, 棕色, 绿色, 橙色, 靛色, 粉色, 白色,
     }
 
     private readonly byte[][] RES_FacilityColor = //facility appearance
@@ -702,7 +702,7 @@ public partial class SAV_FestivalPlaza : Form
             else
                 msg += $"{Environment.NewLine}not replaced: {GetSpeciesNameFromPKM(p[i])}";
         }
-        if (DialogResult.Yes != WinFormsUtil.Prompt(MessageBoxButtons.YesNo, "Replace PKM?", msg))
+        if (DialogResult.Yes != WinFormsUtil.Prompt(MessageBoxButtons.YesNo, "保存宝可梦?", msg))
             return;
 
         for (int i = 0, min = Math.Min(3, party.Count); i < min; i++)
@@ -756,7 +756,7 @@ public partial class SAV_FestivalPlaza : Form
 
     private void B_AgentGlass_Click(object sender, EventArgs e)
     {
-        if (NUD_Grade.Value < 30 && DialogResult.Yes != WinFormsUtil.Prompt(MessageBoxButtons.YesNo, "Agent Sunglasses is reward of Grade 30.", "Continue?"))
+        if (NUD_Grade.Value < 30 && DialogResult.Yes != WinFormsUtil.Prompt(MessageBoxButtons.YesNo, "代理人墨镜是30级的奖励.", "继续?"))
             return;
         SAV.Data[SAV.Fashion.Offset + 0xD0] = 3;
         B_AgentGlass.Enabled = false;

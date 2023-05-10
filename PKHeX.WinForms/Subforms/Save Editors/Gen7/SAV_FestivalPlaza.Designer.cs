@@ -165,7 +165,7 @@ namespace PKHeX.WinForms
             L_FC_Current.Name = "L_FC_Current";
             L_FC_Current.Size = new System.Drawing.Size(82, 23);
             L_FC_Current.TabIndex = 2;
-            L_FC_Current.Text = "Current:";
+            L_FC_Current.Text = "持有:";
             L_FC_Current.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // GB_FC
@@ -183,7 +183,7 @@ namespace PKHeX.WinForms
             GB_FC.Size = new System.Drawing.Size(183, 120);
             GB_FC.TabIndex = 2;
             GB_FC.TabStop = false;
-            GB_FC.Text = "Festa Coins";
+            GB_FC.Text = "圆庆币";
             // 
             // L_FC_CollectedV
             // 
@@ -202,7 +202,7 @@ namespace PKHeX.WinForms
             L_FC_CollectedL.Name = "L_FC_CollectedL";
             L_FC_CollectedL.Size = new System.Drawing.Size(82, 23);
             L_FC_CollectedL.TabIndex = 5;
-            L_FC_CollectedL.Text = "Collected:";
+            L_FC_CollectedL.Text = "至今收集:";
             L_FC_CollectedL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NUD_FC_Used
@@ -223,7 +223,7 @@ namespace PKHeX.WinForms
             L_FC_Used.Name = "L_FC_Used";
             L_FC_Used.Size = new System.Drawing.Size(82, 23);
             L_FC_Used.TabIndex = 4;
-            L_FC_Used.Text = "Used:";
+            L_FC_Used.Text = "花费:";
             L_FC_Used.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // B_Save
@@ -234,7 +234,7 @@ namespace PKHeX.WinForms
             B_Save.Name = "B_Save";
             B_Save.Size = new System.Drawing.Size(88, 27);
             B_Save.TabIndex = 1;
-            B_Save.Text = "Save";
+            B_Save.Text = "保存";
             B_Save.UseVisualStyleBackColor = true;
             B_Save.Click += B_Save_Click;
             // 
@@ -246,7 +246,7 @@ namespace PKHeX.WinForms
             B_Cancel.Name = "B_Cancel";
             B_Cancel.Size = new System.Drawing.Size(88, 27);
             B_Cancel.TabIndex = 0;
-            B_Cancel.Text = "Cancel";
+            B_Cancel.Text = "取消";
             B_Cancel.UseVisualStyleBackColor = true;
             B_Cancel.Click += B_Cancel_Click;
             // 
@@ -261,7 +261,7 @@ namespace PKHeX.WinForms
             GB_Phrase.Size = new System.Drawing.Size(252, 213);
             GB_Phrase.TabIndex = 3;
             GB_Phrase.TabStop = false;
-            GB_Phrase.Text = "Common Phrases+";
+            GB_Phrase.Text = "台词";
             // 
             // CLB_Phrases
             // 
@@ -282,7 +282,7 @@ namespace PKHeX.WinForms
             B_AllPhrases.Name = "B_AllPhrases";
             B_AllPhrases.Size = new System.Drawing.Size(88, 29);
             B_AllPhrases.TabIndex = 0;
-            B_AllPhrases.Text = "Check All";
+            B_AllPhrases.Text = "解锁所有";
             B_AllPhrases.UseVisualStyleBackColor = true;
             B_AllPhrases.Click += B_AllPhrases_Click;
             // 
@@ -307,7 +307,7 @@ namespace PKHeX.WinForms
             L_VisitorName.Name = "L_VisitorName";
             L_VisitorName.Size = new System.Drawing.Size(104, 23);
             L_VisitorName.TabIndex = 69;
-            L_VisitorName.Text = "Visitor Name:";
+            L_VisitorName.Text = "游客名:";
             L_VisitorName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_UsedStats
@@ -317,7 +317,7 @@ namespace PKHeX.WinForms
             L_UsedStats.Name = "L_UsedStats";
             L_UsedStats.Size = new System.Drawing.Size(92, 23);
             L_UsedStats.TabIndex = 68;
-            L_UsedStats.Text = "Used Stats:";
+            L_UsedStats.Text = "使用统计:";
             L_UsedStats.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_UsedFlags
@@ -327,7 +327,7 @@ namespace PKHeX.WinForms
             L_UsedFlags.Name = "L_UsedFlags";
             L_UsedFlags.Size = new System.Drawing.Size(93, 23);
             L_UsedFlags.TabIndex = 67;
-            L_UsedFlags.Text = "Used Flags:";
+            L_UsedFlags.Text = "使用旗标:";
             L_UsedFlags.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // TB_UsedStats
@@ -348,7 +348,7 @@ namespace PKHeX.WinForms
             B_DelVisitor.Name = "B_DelVisitor";
             B_DelVisitor.Size = new System.Drawing.Size(150, 29);
             B_DelVisitor.TabIndex = 65;
-            B_DelVisitor.Text = "Delete Visitor Data";
+            B_DelVisitor.Text = "清除游客数据";
             B_DelVisitor.UseVisualStyleBackColor = true;
             B_DelVisitor.Click += B_DelVisitor_Click;
             // 
@@ -370,7 +370,7 @@ namespace PKHeX.WinForms
             L_Exchangable.Name = "L_Exchangable";
             L_Exchangable.Size = new System.Drawing.Size(144, 23);
             L_Exchangable.TabIndex = 63;
-            L_Exchangable.Text = "exchange left count:";
+            L_Exchangable.Text = "交易剩余计数:";
             L_Exchangable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NUD_Exchangable
@@ -405,7 +405,7 @@ namespace PKHeX.WinForms
             L_FacilityColorV.Name = "L_FacilityColorV";
             L_FacilityColorV.Size = new System.Drawing.Size(89, 23);
             L_FacilityColorV.TabIndex = 60;
-            L_FacilityColorV.Text = "colorvalue";
+            L_FacilityColorV.Text = "颜色";
             L_FacilityColorV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // L_FestaID
@@ -415,7 +415,7 @@ namespace PKHeX.WinForms
             L_FestaID.Name = "L_FestaID";
             L_FestaID.Size = new System.Drawing.Size(211, 23);
             L_FestaID.TabIndex = 59;
-            L_FestaID.Text = "Unknown value / Visitor FesID:";
+            L_FestaID.Text = "不明数据/游客ID:";
             L_FestaID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // TB_FacilityID
@@ -441,7 +441,7 @@ namespace PKHeX.WinForms
             GB_FacilityMessage.Size = new System.Drawing.Size(180, 61);
             GB_FacilityMessage.TabIndex = 58;
             GB_FacilityMessage.TabStop = false;
-            GB_FacilityMessage.Text = "Visitor message";
+            GB_FacilityMessage.Text = "游客信息";
             // 
             // NUD_FacilityMessage
             // 
@@ -487,7 +487,7 @@ namespace PKHeX.WinForms
             CHK_FacilityIntroduced.Name = "CHK_FacilityIntroduced";
             CHK_FacilityIntroduced.Size = new System.Drawing.Size(224, 30);
             CHK_FacilityIntroduced.TabIndex = 9;
-            CHK_FacilityIntroduced.Text = "Visitor introduced this facility";
+            CHK_FacilityIntroduced.Text = "向游客介绍过本店";
             CHK_FacilityIntroduced.UseVisualStyleBackColor = true;
             CHK_FacilityIntroduced.CheckedChanged += CHK_FacilityIntroduced_CheckedChanged;
             // 
@@ -498,7 +498,7 @@ namespace PKHeX.WinForms
             L_FacilityNPC.Name = "L_FacilityNPC";
             L_FacilityNPC.Size = new System.Drawing.Size(52, 23);
             L_FacilityNPC.TabIndex = 8;
-            L_FacilityNPC.Text = "NPC:";
+            L_FacilityNPC.Text = "店员:";
             L_FacilityNPC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NUD_FacilityColor
@@ -519,7 +519,7 @@ namespace PKHeX.WinForms
             L_FacilityColor.Name = "L_FacilityColor";
             L_FacilityColor.Size = new System.Drawing.Size(55, 23);
             L_FacilityColor.TabIndex = 6;
-            L_FacilityColor.Text = "color:";
+            L_FacilityColor.Text = "颜色:";
             L_FacilityColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_FacilityType
@@ -529,7 +529,7 @@ namespace PKHeX.WinForms
             L_FacilityType.Name = "L_FacilityType";
             L_FacilityType.Size = new System.Drawing.Size(51, 23);
             L_FacilityType.TabIndex = 5;
-            L_FacilityType.Text = "type:";
+            L_FacilityType.Text = "种类:";
             L_FacilityType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CB_FacilityNPC
@@ -591,7 +591,7 @@ namespace PKHeX.WinForms
             GB_FestaStartTime.Size = new System.Drawing.Size(136, 92);
             GB_FestaStartTime.TabIndex = 38;
             GB_FestaStartTime.TabStop = false;
-            GB_FestaStartTime.Text = "Latest Start Time";
+            GB_FestaStartTime.Text = "最近一次进入";
             // 
             // GB_Reward
             // 
@@ -605,7 +605,7 @@ namespace PKHeX.WinForms
             GB_Reward.Size = new System.Drawing.Size(233, 213);
             GB_Reward.TabIndex = 39;
             GB_Reward.TabStop = false;
-            GB_Reward.Text = "RankUP rewards";
+            GB_Reward.Text = "升级奖励";
             // 
             // B_AllReadyReward
             // 
@@ -614,7 +614,7 @@ namespace PKHeX.WinForms
             B_AllReadyReward.Name = "B_AllReadyReward";
             B_AllReadyReward.Size = new System.Drawing.Size(153, 29);
             B_AllReadyReward.TabIndex = 2;
-            B_AllReadyReward.Text = "All ready to receive";
+            B_AllReadyReward.Text = "未获得所有";
             B_AllReadyReward.UseVisualStyleBackColor = true;
             B_AllReadyReward.Click += B_AllReadyReward_Click;
             // 
@@ -638,7 +638,7 @@ namespace PKHeX.WinForms
             B_AllReceiveReward.Name = "B_AllReceiveReward";
             B_AllReceiveReward.Size = new System.Drawing.Size(153, 29);
             B_AllReceiveReward.TabIndex = 0;
-            B_AllReceiveReward.Text = "All received";
+            B_AllReceiveReward.Text = "获得所有";
             B_AllReceiveReward.UseVisualStyleBackColor = true;
             B_AllReceiveReward.Click += B_AllReceiveReward_Click;
             // 
@@ -660,7 +660,7 @@ namespace PKHeX.WinForms
             L_Rank.Name = "L_Rank";
             L_Rank.Size = new System.Drawing.Size(54, 23);
             L_Rank.TabIndex = 41;
-            L_Rank.Text = "Rank";
+            L_Rank.Text = "等级";
             L_Rank.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // GB_MyMessage
@@ -680,7 +680,7 @@ namespace PKHeX.WinForms
             GB_MyMessage.Size = new System.Drawing.Size(155, 180);
             GB_MyMessage.TabIndex = 59;
             GB_MyMessage.TabStop = false;
-            GB_MyMessage.Text = "Message Settings";
+            GB_MyMessage.Text = "来访咨询";
             // 
             // L_MyMessageDisappointed
             // 
@@ -689,7 +689,7 @@ namespace PKHeX.WinForms
             L_MyMessageDisappointed.Name = "L_MyMessageDisappointed";
             L_MyMessageDisappointed.Size = new System.Drawing.Size(103, 23);
             L_MyMessageDisappointed.TabIndex = 8;
-            L_MyMessageDisappointed.Text = "Disappointed:";
+            L_MyMessageDisappointed.Text = "失望:";
             L_MyMessageDisappointed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_MyMessageMoved
@@ -699,7 +699,7 @@ namespace PKHeX.WinForms
             L_MyMessageMoved.Name = "L_MyMessageMoved";
             L_MyMessageMoved.Size = new System.Drawing.Size(64, 23);
             L_MyMessageMoved.TabIndex = 7;
-            L_MyMessageMoved.Text = "Moved:";
+            L_MyMessageMoved.Text = "带路:";
             L_MyMessageMoved.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_MyMessagePart
@@ -709,7 +709,7 @@ namespace PKHeX.WinForms
             L_MyMessagePart.Name = "L_MyMessagePart";
             L_MyMessagePart.Size = new System.Drawing.Size(50, 23);
             L_MyMessagePart.TabIndex = 6;
-            L_MyMessagePart.Text = "Part:";
+            L_MyMessagePart.Text = "离开:";
             L_MyMessagePart.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // L_MyMessageMeet
@@ -719,7 +719,7 @@ namespace PKHeX.WinForms
             L_MyMessageMeet.Name = "L_MyMessageMeet";
             L_MyMessageMeet.Size = new System.Drawing.Size(55, 23);
             L_MyMessageMeet.TabIndex = 5;
-            L_MyMessageMeet.Text = "Meet:";
+            L_MyMessageMeet.Text = "遇见:";
             L_MyMessageMeet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NUD_MyMessageDissapointed
@@ -800,7 +800,7 @@ namespace PKHeX.WinForms
             Tab_Overview.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
             Tab_Overview.Size = new System.Drawing.Size(518, 241);
             Tab_Overview.TabIndex = 0;
-            Tab_Overview.Text = "Overview";
+            Tab_Overview.Text = "概览";
             Tab_Overview.UseVisualStyleBackColor = true;
             // 
             // L_PlazaName
@@ -811,7 +811,7 @@ namespace PKHeX.WinForms
             L_PlazaName.Name = "L_PlazaName";
             L_PlazaName.Size = new System.Drawing.Size(114, 15);
             L_PlazaName.TabIndex = 64;
-            L_PlazaName.Text = "Festival Plaza Name:";
+            L_PlazaName.Text = "圆庆广场命名:";
             L_PlazaName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TB_PlazaName
@@ -845,7 +845,7 @@ namespace PKHeX.WinForms
             Tab_Unlock.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
             Tab_Unlock.Size = new System.Drawing.Size(518, 241);
             Tab_Unlock.TabIndex = 1;
-            Tab_Unlock.Text = "Unlock";
+            Tab_Unlock.Text = "解锁";
             Tab_Unlock.UseVisualStyleBackColor = true;
             // 
             // Tab_Facility
@@ -879,7 +879,7 @@ namespace PKHeX.WinForms
             Tab_Facility.Name = "Tab_Facility";
             Tab_Facility.Size = new System.Drawing.Size(518, 241);
             Tab_Facility.TabIndex = 2;
-            Tab_Facility.Text = "Facility";
+            Tab_Facility.Text = "店铺";
             Tab_Facility.UseVisualStyleBackColor = true;
             // 
             // L_LuckyResult
@@ -889,7 +889,7 @@ namespace PKHeX.WinForms
             L_LuckyResult.Name = "L_LuckyResult";
             L_LuckyResult.Size = new System.Drawing.Size(64, 23);
             L_LuckyResult.TabIndex = 71;
-            L_LuckyResult.Text = "Result:";
+            L_LuckyResult.Text = "结果:";
             L_LuckyResult.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CB_LuckyResult
@@ -927,7 +927,7 @@ namespace PKHeX.WinForms
             Tab_BattleAgency.Name = "Tab_BattleAgency";
             Tab_BattleAgency.Size = new System.Drawing.Size(518, 241);
             Tab_BattleAgency.TabIndex = 3;
-            Tab_BattleAgency.Text = "BattleAgency";
+            Tab_BattleAgency.Text = "代理人对战";
             Tab_BattleAgency.UseVisualStyleBackColor = true;
             // 
             // B_AgentGlass
@@ -937,7 +937,7 @@ namespace PKHeX.WinForms
             B_AgentGlass.Name = "B_AgentGlass";
             B_AgentGlass.Size = new System.Drawing.Size(172, 29);
             B_AgentGlass.TabIndex = 19;
-            B_AgentGlass.Text = "Give Agent Sunglasses";
+            B_AgentGlass.Text = "获得代理人墨镜";
             B_AgentGlass.UseVisualStyleBackColor = true;
             B_AgentGlass.Click += B_AgentGlass_Click;
             // 
@@ -978,7 +978,7 @@ namespace PKHeX.WinForms
             L_DefeatMon.Name = "L_DefeatMon";
             L_DefeatMon.Size = new System.Drawing.Size(227, 23);
             L_DefeatMon.TabIndex = 15;
-            L_DefeatMon.Text = "Today's Defeated Pokemon Count:";
+            L_DefeatMon.Text = "今天被击败的宝可梦数:";
             L_DefeatMon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NUD_DefeatMon
@@ -998,7 +998,7 @@ namespace PKHeX.WinForms
             L_Note.Name = "L_Note";
             L_Note.Size = new System.Drawing.Size(149, 45);
             L_Note.TabIndex = 13;
-            L_Note.Text = "Upcoming 3 Trainers:\r\n(210: unset) ";
+            L_Note.Text = "即将出现的三名训练家:\r\n(210: 未设置) ";
             L_Note.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // L_Defeated
@@ -1008,7 +1008,7 @@ namespace PKHeX.WinForms
             L_Defeated.Name = "L_Defeated";
             L_Defeated.Size = new System.Drawing.Size(259, 23);
             L_Defeated.TabIndex = 12;
-            L_Defeated.Text = "Defeated Trainer Count for Next Grade:";
+            L_Defeated.Text = "下一个等级被击败的训练家数:";
             L_Defeated.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NUD_Defeated
@@ -1039,7 +1039,7 @@ namespace PKHeX.WinForms
             CHK_TrainerInvited.Name = "CHK_TrainerInvited";
             CHK_TrainerInvited.Size = new System.Drawing.Size(85, 30);
             CHK_TrainerInvited.TabIndex = 9;
-            CHK_TrainerInvited.Text = "Invited";
+            CHK_TrainerInvited.Text = "邀请";
             CHK_TrainerInvited.UseVisualStyleBackColor = true;
             // 
             // CHK_Choosed
@@ -1049,7 +1049,7 @@ namespace PKHeX.WinForms
             CHK_Choosed.Name = "CHK_Choosed";
             CHK_Choosed.Size = new System.Drawing.Size(97, 30);
             CHK_Choosed.TabIndex = 8;
-            CHK_Choosed.Text = "Choosed";
+            CHK_Choosed.Text = "选择";
             CHK_Choosed.UseVisualStyleBackColor = true;
             // 
             // ppkx1
@@ -1074,7 +1074,7 @@ namespace PKHeX.WinForms
             // 
             mnuSave.Name = "mnuSave";
             mnuSave.Size = new System.Drawing.Size(126, 22);
-            mnuSave.Text = "Save PKM";
+            mnuSave.Text = "保存宝可梦";
             mnuSave.Click += MnuSave_Click;
             // 
             // L_Grade
@@ -1084,7 +1084,7 @@ namespace PKHeX.WinForms
             L_Grade.Name = "L_Grade";
             L_Grade.Size = new System.Drawing.Size(61, 23);
             L_Grade.TabIndex = 7;
-            L_Grade.Text = "Grade:";
+            L_Grade.Text = "等级:";
             L_Grade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // B_ImportParty
@@ -1094,7 +1094,7 @@ namespace PKHeX.WinForms
             B_ImportParty.Name = "B_ImportParty";
             B_ImportParty.Size = new System.Drawing.Size(142, 29);
             B_ImportParty.TabIndex = 7;
-            B_ImportParty.Text = "Import from Party";
+            B_ImportParty.Text = "从同行队伍导入";
             B_ImportParty.UseVisualStyleBackColor = true;
             B_ImportParty.Click += B_ImportParty_Click;
             // 
@@ -1109,7 +1109,7 @@ namespace PKHeX.WinForms
             GB_Others.Size = new System.Drawing.Size(102, 156);
             GB_Others.TabIndex = 6;
             GB_Others.TabStop = false;
-            GB_Others.Text = "Others";
+            GB_Others.Text = "队友";
             // 
             // ppkx3
             // 
@@ -1149,7 +1149,7 @@ namespace PKHeX.WinForms
             MinimizeBox = false;
             Name = "SAV_FestivalPlaza";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "Festival Plaza Editor";
+            Text = "圆庆广场修改";
             ((System.ComponentModel.ISupportInitialize)NUD_FC_Current).EndInit();
             GB_FC.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)NUD_FC_Used).EndInit();
