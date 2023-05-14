@@ -536,7 +536,7 @@ public sealed class WC8 : DataMysteryGift, ILangNick, INature, IGigantamax, IDyn
         pk.Gender = criteria.GetGender(Gender, pi);
         var av = GetAbilityIndex(criteria);
         pk.RefreshAbility(av);
-        SetPID(pk, pk.MetDate ?? DateOnly.FromDateTime(DateTime.UtcNow));
+        SetPID(pk);
         SetIVs(pk);
     }
 
@@ -556,7 +556,7 @@ public sealed class WC8 : DataMysteryGift, ILangNick, INature, IGigantamax, IDyn
         _ => AbilityPermission.Any12H,
     };
 
-    private uint GetPID(ITrainerID32 tr, ShinyType8 type, DateOnly date) => type switch
+    private uint GetPID(ITrainerID32 tr, ShinyType8 type) => type switch
     {
         ShinyType8.Never        => GetAntishiny(tr), // Random, Never Shiny
         ShinyType8.Random       => Util.Rand32(), // Random, Any
@@ -589,9 +589,9 @@ public sealed class WC8 : DataMysteryGift, ILangNick, INature, IGigantamax, IDyn
         return pid;
     }
 
-    private void SetPID(PKM pk, DateOnly date)
+    private void SetPID(PKM pk)
     {
-        pk.PID = GetPID(pk, PIDType, date);
+        pk.PID = GetPID(pk, PIDType);
     }
 
     private void SetIVs(PKM pk)
@@ -729,7 +729,7 @@ public sealed class WC8 : DataMysteryGift, ILangNick, INature, IGigantamax, IDyn
         var type = PIDType;
         if (type is ShinyType8.Never or ShinyType8.Random)
             return true;
-        return pk.PID == GetPID(pk, type, pk.MetDate ?? DateOnly.FromDateTime(DateTime.UtcNow));
+        return pk.PID == GetPID(pk, type);
     }
 
     private bool IsHOMEShinyPossible()
