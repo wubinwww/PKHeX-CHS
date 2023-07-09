@@ -125,7 +125,7 @@ public static class MarkRules
             return true;
 
         // Before HOME 3.0.0, this mark was never set.
-        return pk is PK8 or PB8 or PA8; // Not yet touched HOME 3.0.0
+        return wasAlpha && pk is PK8 or PB8 or PA8; // Not yet touched HOME 3.0.0
     }
 
     /// <summary>
@@ -142,10 +142,13 @@ public static class MarkRules
     /// </summary>
     public static bool IsMarkAllowedJumbo(EvolutionHistory evos, PKM pk)
     {
+        const byte expect = byte.MaxValue;
         if (!evos.HasVisitedGen9)
             return false;
         if (pk is IScaledSize3 s)
-            return s.Scale == byte.MaxValue;
+            return s.Scale == expect;
+        if (pk is IScaledSize s2)
+            return s2.HeightScalar == expect;
         return false;
     }
 
@@ -154,10 +157,13 @@ public static class MarkRules
     /// </summary>
     public static bool IsMarkAllowedMini(EvolutionHistory evos, PKM pk)
     {
+        const byte expect = byte.MinValue;
         if (!evos.HasVisitedGen9)
             return false;
         if (pk is IScaledSize3 s)
-            return s.Scale == 0;
+            return s.Scale == expect;
+        if (pk is IScaledSize s2)
+            return s2.HeightScalar == expect;
         return false;
     }
 

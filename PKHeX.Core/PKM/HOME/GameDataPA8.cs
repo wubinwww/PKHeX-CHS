@@ -6,7 +6,7 @@ namespace PKHeX.Core;
 /// <summary>
 /// Side game data for <see cref="PA8"/> data transferred into HOME.
 /// </summary>
-public class GameDataPA8 : HomeOptional1, IGameDataSide<PA8>, IScaledSizeAbsolute, IScaledSize3
+public sealed class GameDataPA8 : HomeOptional1, IGameDataSide<PA8>, IScaledSizeAbsolute, IScaledSize3, IGameDataSplitAbility
 {
     private const HomeGameDataFormat ExpectFormat = HomeGameDataFormat.PA8;
     private const int SIZE = HomeCrypto.SIZE_2GAME_PA8;
@@ -169,7 +169,7 @@ public class GameDataPA8 : HomeOptional1, IGameDataSide<PA8>, IScaledSizeAbsolut
 
     public void InitializeFrom(IGameDataSide side, PKH pkh)
     {
-        Ball = GetLegendBall(side.Ball);
+        Ball = GetLegendBall(side.Ball, pkh.LA);
         Met_Location = side.Met_Location == Locations.Default8bNone ? 0 : side.Met_Location;
         Egg_Location = side.Egg_Location == Locations.Default8bNone ? 0 : side.Egg_Location;
 
@@ -187,8 +187,10 @@ public class GameDataPA8 : HomeOptional1, IGameDataSide<PA8>, IScaledSizeAbsolut
         PopulateFromCore(pkh);
     }
 
-    private static int GetLegendBall(int ball)
+    private static int GetLegendBall(int ball, bool wasLA)
     {
+        if (!wasLA)
+            return ball;
         if (((Ball)ball).IsLegendBall())
             return ball;
         return (byte)Core.Ball.LAPoke;

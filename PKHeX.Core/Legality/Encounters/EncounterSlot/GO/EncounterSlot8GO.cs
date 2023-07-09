@@ -7,9 +7,10 @@ namespace PKHeX.Core;
 /// Encounter Slot representing data transferred to <see cref="GameVersion.Gen8"/> (HOME).
 /// <inheritdoc cref="EncounterSlotGO" />
 /// </summary>
-public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship
+public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship, IEncounterServerDate
 {
     public override int Generation => 8;
+    public bool IsDateRestricted => true;
 
     /// <summary>
     /// Encounters need a Parent Game to determine the original moves when transferred to HOME.
@@ -29,17 +30,19 @@ public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship
     /// <summary>
     /// Checks if the <seealso cref="Ball"/> is compatible with the <seealso cref="PogoType"/>.
     /// </summary>
-    public bool IsBallValid(Ball ball, ushort currentSpecies)
+    public bool IsBallValid(Ball ball, ushort currentSpecies, PKM pk)
     {
         // GO does not natively produce Shedinja when evolving Nincada, and thus must be evolved in future games.
         if (currentSpecies == (int)Shedinja && currentSpecies != Species)
             return ball == Ball.Poke;
+        if (ball == Ball.Master)
+            return Type.IsMasterBallUsable() && pk.MetDate >= new DateOnly(2023, 5, 21);
         return Type.IsBallValid(ball);
     }
 
     protected override PKM GetBlank() => OriginFormat switch
     {
-        PogoImportFormat.PK7 => new PK9(),
+        PogoImportFormat.PK7 => new PK8(),
         PogoImportFormat.PB7 => new PB7(),
         PogoImportFormat.PK8 => new PK8(),
         PogoImportFormat.PA8 => new PA8(),
@@ -57,7 +60,7 @@ public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship
         _ => throw new ArgumentOutOfRangeException(nameof(OriginFormat)),
     };
 
-    internal GameVersion OriginGroup => OriginFormat switch
+    private GameVersion OriginGroup => OriginFormat switch
     {
         PogoImportFormat.PK7 => GameVersion.USUM,
         PogoImportFormat.PB7 => GameVersion.GG,
@@ -72,6 +75,7 @@ public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship
         PogoImportFormat.PK7 or PogoImportFormat.PB7 =>
               PersonalTable.BDSP.IsPresentInGame(Species, Form) ? EntityContext.Gen8b
             : PersonalTable.LA.IsPresentInGame(Species, Form) ? EntityContext.Gen8a
+            : PersonalTable.SV.IsPresentInGame(Species, Form) ? EntityContext.Gen9
             : EntityContext.Gen8, // don't throw an exception, just give them a context.
         PogoImportFormat.PK8 => EntityContext.Gen8,
         PogoImportFormat.PA8 => EntityContext.Gen8a,
@@ -90,6 +94,9 @@ public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship
         var ball = Type.GetValidBall();
         if (ball != Ball.None)
             pk.Ball = (int)ball;
+
+        pk.OT_Friendship = OT_Friendship;
+        pk.SetRandomEC();
 
         if (pk is IScaledSize s)
         {
@@ -110,10 +117,6 @@ public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship
             pk9.TeraTypeOriginal = pk9.TeraTypeOverride = TeraTypeUtil.GetTeraTypeImport(pi.Type1, pi.Type2);
             pk9.Obedience_Level = (byte)pk9.Met_Level;
         }
-
-        pk.OT_Friendship = OT_Friendship;
-
-        pk.SetRandomEC();
     }
 
     protected override void SetPINGA(PKM pk, EncounterCriteria criteria)
@@ -176,8 +179,7 @@ public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship
 
     private bool IsMatchPartial(PKM pk)
     {
-        var stamp = GetTimeStamp(pk.Met_Year + 2000, pk.Met_Month, pk.Met_Day);
-        if (!IsWithinStartEnd(stamp))
+        if (!IsWithinDistributionWindow(pk))
             return true;
         if (!GetIVsAboveMinimum(pk))
             return true;
@@ -187,6 +189,18 @@ public sealed record EncounterSlot8GO : EncounterSlotGO, IFixedOTFriendship
             return true;
 
         return IsFormArgIncorrect(pk);
+    }
+
+    public bool IsWithinDistributionWindow(PKM pk)
+    {
+        var date = new DateOnly(pk.Met_Year + 2000, pk.Met_Month, pk.Met_Day);
+        return IsWithinDistributionWindow(date);
+    }
+
+    public bool IsWithinDistributionWindow(DateOnly date)
+    {
+        var stamp = GetTimeStamp(date.Year, date.Month, date.Day);
+        return IsWithinStartEnd(stamp);
     }
 
     private bool IsFormArgIncorrect(ISpeciesForm pk) => Species switch
