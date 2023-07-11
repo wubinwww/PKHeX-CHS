@@ -33,11 +33,11 @@ public sealed class Poffin4
     public byte Smoothness  { get => Data[6]; set => Data[6] = value; }
     // public byte Unused   { get => Data[7]; set => Data[7] = value; }
 
-    public bool IsManyStat => Type >= PoffinFlavor4.Rich;
-    public PoffinFlavor4 StatPrimary => IsManyStat ? PoffinFlavor4.None : (PoffinFlavor4)(((byte) Type / 5) * 6);
-    public PoffinFlavor4 StatSecondary => IsManyStat ? PoffinFlavor4.None : (PoffinFlavor4)(((byte)Type % 5) * 6);
+    public bool IsManyStat => Type >= PoffinFlavor4.浓厚宝芬;
+    public PoffinFlavor4 StatPrimary => IsManyStat ? PoffinFlavor4.无 : (PoffinFlavor4)(((byte) Type / 5) * 6);
+    public PoffinFlavor4 StatSecondary => IsManyStat ? PoffinFlavor4.无 : (PoffinFlavor4)(((byte)Type % 5) * 6);
 
-    public void SetAll(byte value = 255, PoffinFlavor4 type = PoffinFlavor4.Rich)
+    public void SetAll(byte value = 255, PoffinFlavor4 type = PoffinFlavor4.浓厚宝芬)
     {
         Type = type;
         BoostSpicy = BoostDry = BoostSweet = BoostBitter = BoostSour = Smoothness = value;
@@ -57,5 +57,5 @@ public sealed class Poffin4
         return Data[1 + stat];
     }
 
-    public void Delete() => SetAll(0, PoffinFlavor4.None);
+    public void Delete() => SetAll(0, PoffinFlavor4.无);
 }
