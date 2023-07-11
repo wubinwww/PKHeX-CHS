@@ -14,7 +14,7 @@ public enum PokegearNumber : sbyte
     钢铁,
     培育屋老爷爷,
     培育屋老奶奶,
-    狩猎园长巴奥巴,
+    葵妍,
     正辉,
     短裤小子五郎,
     垂钓者康明,
