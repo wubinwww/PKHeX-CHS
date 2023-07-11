@@ -75,10 +75,10 @@ public partial class SAV_Misc5 : Form
             case GameVersion.B or GameVersion.W or GameVersion.BW:
                 ofsFly = 0x204B2;
                 FlyDestA = new[] {
-                    "Nuvema Town", "Accumula Town", "Striaton City", "Nacrene City",
-                    "Castelia City", "Nimbasa City", "Driftveil City", "Mistralton City",
-                    "Icirrus City", "Opelucid City", "Victory Road", "Pokemon League",
-                    "Lacunosa Town", "Undella Town", "Black City/White Forest", "(Unity Tower)",
+                    "鹿子镇", "唐草镇", "三曜市", "七宝市",
+                    "飞云市", "雷文市", "帆巴市", "吹寄市",
+                    "雪花市", "双龙市", "冠军之路", "宝可梦联盟大门",
+                    "笼目镇", "涟漪镇", "黑色市/白森林", "(联合塔)",
                 };
                 FlyDestC = new[] {
                     0, 1, 2, 3,
@@ -90,13 +90,13 @@ public partial class SAV_Misc5 : Form
             case GameVersion.B2 or GameVersion.W2 or GameVersion.B2W2:
                 ofsFly = 0x20392;
                 FlyDestA = new[] {
-                    "Aspertia City", "Floccesy Town", "Virbank City",
-                    "Nuvema Town", "Accumula Town", "Striaton City", "Nacrene City",
-                    "Castelia City", "Nimbasa City", "Driftveil City", "Mistralton City",
-                    "Icirrus City", "Opelucid City",
-                    "Lacunosa Town", "Undella Town", "Black City/White Forest",
-                    "Lentimas Town", "Humilau City", "Victory Road", "Pokemon League",
-                    "Pokestar Studios", "Join Avenue", "PWT", "(Unity Tower)",
+                    "桧扇市", "算木镇", "立涌市",
+                    "鹿子镇", "唐草镇", "三曜市", "七宝市",
+                    "飞云市", "雷文市", "帆巴市", "吹寄市",
+                    "雪花市", "双龙市",
+                    "笼目镇", "涟漪镇", "黑色市/白森林",
+                    "山路镇", "青海波市", "冠军之路", "宝可梦联盟大门",
+                    "宝可梦好莱坞", "汇合大道", "PWT", "(联合塔)",
                 };
                 FlyDestC = new[] {
                     24, 27, 25,
@@ -173,9 +173,9 @@ public partial class SAV_Misc5 : Form
             // KeySystem
             string[] KeySystemA =
             {
-                "Obtain EasyKey", "Obtain ChallengeKey", "Obtain CityKey", "Obtain IronKey", "Obtain IcebergKey",
-                "Unlock EasyMode", "Unlock ChallengeMode", "Unlock City", "Unlock IronChamber",
-                "Unlock IcebergChamber",
+                "获得助手钥匙", "获得挑战钥匙", "获得摩天楼/树洞钥匙", "获得黑金钥匙", "获得冰山钥匙",
+                "解锁助手模式", "解锁挑战模式", "解锁黑色市/白森林", "解锁黑金之间",
+                "解锁冰山之间",
             };
             uint KSID = ReadUInt32LittleEndian(SAV.Data.AsSpan(ofsKS + 0x34));
             valKS = new uint[keyKS.Length];
@@ -197,17 +197,17 @@ public partial class SAV_Misc5 : Form
 
     private static List<ComboItem> GetStates() => new()
     {
-        new ComboItem("Not roamed", 0),
-        new ComboItem("Roaming", 1),
-        new ComboItem("Defeated", 2),
-        new ComboItem("Captured", 3),
+        new ComboItem("未游走", 0),
+        new ComboItem("游走", 1),
+        new ComboItem("击败", 2),
+        new ComboItem("捕获", 3),
     };
 
     private static List<ComboItem> GetRoamStatusStates() => new()
     {
-        new ComboItem("Not happened", 0),
-        new ComboItem("Go to route 7", 1),
-        new ComboItem("Event finished", 3),
+        new ComboItem("没有发生", 0),
+        new ComboItem("前往7号道路", 1),
+        new ComboItem("事件已完成", 3),
     };
 
     private void SaveMain()
