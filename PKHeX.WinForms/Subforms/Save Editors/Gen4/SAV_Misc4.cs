@@ -454,10 +454,10 @@ public partial class SAV_Misc4 : Form
             new[] { 2, 0, 1, -1, 3 }, // Max, Current, Current(CP), (UsedCP), Max(CP)
         };
         BFT = new[] {
-            new[] { "Singles", "Doubles", "Multi" },
-            new[] { "Singles", "Doubles", "Multi (Trainer)", "Multi (Friend)", "Wi-Fi" },
+            new[] { "单打", "双打", "多人" },
+            new[] { "单打", "双打", "多人 (训练师)", "多人 (朋友)", "Wi-Fi" },
         };
-        BFN = new[] { "Tower", "Factory", "Hall", "Castle", "Arcade" };
+        BFN = new[] { "对战塔", "对战工厂", "对战舞台", "对战城堡", "对战轮盘" };
         if (SAV is SAV4DP) BFN = BFN.Take(1).ToArray();
         StatNUDA = new[] { NUD_Stat0, NUD_Stat1, NUD_Stat2, NUD_Stat3 };
         StatLabelA = new[] { L_Stat0, L_Stat1, L_Stat2, L_Stat3 };
