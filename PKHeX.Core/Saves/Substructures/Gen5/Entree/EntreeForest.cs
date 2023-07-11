@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static System.Buffers.Binary.BinaryPrimitives;
 
 namespace PKHeX.Core;
@@ -94,12 +94,12 @@ public sealed class EntreeForest
     private static EntreeForestArea GetSlotArea(int index)
     {
         if (index < Count18)
-            return EntreeForestArea.Deepest;
+            return EntreeForestArea.最深处;
         index -= Count18;
 
         const int slots9 = 3 * Count9;
         if (index < slots9)
-            return EntreeForestArea.Ninth | GetSlotPosition(index / Count9);
+            return EntreeForestArea.第九区 | GetSlotPosition(index / Count9);
         index -= slots9;
 
         const int slots18 = 3 * Count18;
@@ -108,14 +108,14 @@ public sealed class EntreeForest
             throw new ArgumentOutOfRangeException(nameof(index));
         index %= slots18;
 
-        return (EntreeForestArea)((int)EntreeForestArea.First << area) | GetSlotPosition(index / Count18);
+        return (EntreeForestArea)((int)EntreeForestArea.第一区 << area) | GetSlotPosition(index / Count18);
     }
 
     private static EntreeForestArea GetSlotPosition(int index) => index switch
     {
-        0 => EntreeForestArea.Center,
-        1 => EntreeForestArea.Left,
-        2 => EntreeForestArea.Right,
+        0 => EntreeForestArea.左边,
+        1 => EntreeForestArea.中央,
+        2 => EntreeForestArea.右边,
         _ => throw new ArgumentOutOfRangeException(),
     };
 }
