@@ -184,7 +184,7 @@ public sealed class SAV4HGSS : SAV4
     }
 
     private const int OFS_GearRolodex = 0xC0EC;
-    private const byte GearMaxCallers = (byte)(PokegearNumber.Ernest + 1);
+    private const byte GearMaxCallers = (byte)(PokegearNumber.暴走族肇顺 + 1);
 
     public PokegearNumber GetCallerAtIndex(int index) => (PokegearNumber)General[OFS_GearRolodex + index];
     public void SetCallerAtIndex(int index, PokegearNumber caller) => General[OFS_GearRolodex + index] = (byte)caller;
@@ -211,24 +211,24 @@ public sealed class SAV4HGSS : SAV4
     public void PokeGearClearAllCallers(int start = 0)
     {
         for (int i = start; i < GearMaxCallers; i++)
-            SetCallerAtIndex(i, PokegearNumber.None);
+            SetCallerAtIndex(i, PokegearNumber.无);
     }
 
     public void PokeGearUnlockAllCallersNoTrainers()
     {
         var nonTrainers = new[]
         {
-            PokegearNumber.Mother,
-            PokegearNumber.Professor_Elm,
-            PokegearNumber.Professor_Oak,
-            PokegearNumber.Ethan,
-            PokegearNumber.Lyra,
-            PokegearNumber.Kurt,
-            PokegearNumber.Daycare_Man,
-            PokegearNumber.Daycare_Lady,
-            PokegearNumber.Bill,
-            PokegearNumber.Bike_Shop,
-            PokegearNumber.Baoba,
+            PokegearNumber.妈妈,
+            PokegearNumber.空木博士,
+            PokegearNumber.大木博士,
+            PokegearNumber.阿响,
+            PokegearNumber.琴音,
+            PokegearNumber.钢铁,
+            PokegearNumber.培育屋老爷爷,
+            PokegearNumber.培育屋老奶奶,
+            PokegearNumber.正辉,
+            PokegearNumber.自行车店,
+            PokegearNumber.巴奥巴,
         };
         for (int i = 0; i < nonTrainers.Length; i++)
             SetCallerAtIndex(i, nonTrainers[i]);
