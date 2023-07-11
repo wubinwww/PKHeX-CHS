@@ -745,7 +745,7 @@ namespace PKHeX.WinForms
             // 
             CB_Fashion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             CB_Fashion.FormattingEnabled = true;
-            CB_Fashion.Items.AddRange(new object[] { "All base game clothes", "Extra hats and Rotometry cases", "DLCs preorder clothes", "PokéPortal clothes" });
+            CB_Fashion.Items.AddRange(new object[] { "所有基础游戏时装", "额外的帽子和包包", "DLC 预购时装", "互联网大赛时装" });
             CB_Fashion.Location = new System.Drawing.Point(15, 199);
             CB_Fashion.Name = "CB_Fashion";
             CB_Fashion.Size = new System.Drawing.Size(260, 28);
