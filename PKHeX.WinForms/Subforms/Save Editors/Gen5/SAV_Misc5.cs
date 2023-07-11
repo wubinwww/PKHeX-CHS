@@ -638,14 +638,14 @@ public partial class SAV_Misc5 : Form
         var list = new List<ComboItem>();
         if (pi.Genderless)
         {
-            list.Add(new ComboItem("Genderless", 2));
+            list.Add(new ComboItem("无性别", 2));
             return list;
         }
 
         if (!pi.OnlyFemale)
-            list.Add(new ComboItem("Male", 0));
+            list.Add(new ComboItem("公", 0));
         if (!pi.OnlyMale)
-            list.Add(new ComboItem("Female", 1));
+            list.Add(new ComboItem("母", 1));
         return list;
     }
 

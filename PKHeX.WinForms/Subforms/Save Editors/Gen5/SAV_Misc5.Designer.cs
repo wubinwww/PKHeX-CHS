@@ -972,7 +972,7 @@ namespace PKHeX.WinForms
             L_Gender.Name = "L_Gender";
             L_Gender.Size = new System.Drawing.Size(71, 24);
             L_Gender.TabIndex = 10;
-            L_Gender.Text = "Gender:";
+            L_Gender.Text = "性别:";
             L_Gender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CB_Gender
