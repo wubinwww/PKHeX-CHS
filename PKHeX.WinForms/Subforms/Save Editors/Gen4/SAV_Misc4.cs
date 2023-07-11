@@ -153,7 +153,7 @@ public partial class SAV_Misc4 : Form
         }
         if (ofsMap > 0)
         {
-            string[] items = { "Map Johto", "Map Johto+", "Map Johto & Kanto" };
+            string[] items = { "城都地图", "城都地图+", "城都 & 关都 地图" };
             int index = (SAV.General[ofsMap] >> 3) & 3;
             if (index > 2) index = 2;
             CB_UpgradeMap.Items.AddRange(items);
