@@ -40,21 +40,21 @@ public sealed class SevenStarRaidDetail
 
     private const string General = nameof(General);
 
-    [Category(General), Description("Identifier used for this 7 Star Raid. Matches the date this raid was first distributed.")]
+    [Category(General), Description("用于此7星团体战的标识符。与这次突袭的首次发布日期相符.")]
     public uint Identifier
     {
         get => ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x00));
         set => WriteUInt32LittleEndian(Data.AsSpan(Offset + 0x00), value);
     }
 
-    [Category(General), Description("Indicates if this Tera Raid Boss has been captured by the player.")]
+    [Category(General), Description("指示玩家是否已捕获此太晶团体战Boss.")]
     public bool Captured
     {
         get => Data[Offset + 0x04] == 1;
         set => Data[Offset + 0x04] = (byte)(value ? 1 : 0);
     }
 
-    [Category(General), Description("Indicates if this Tera Raid Boss has been defeated at least once by the player.")]
+    [Category(General), Description("指示此太晶团体战Boss是否至少被玩家击败过一次.")]
     public bool Defeated
     {
         get => Data[Offset + 0x05] == 1;

@@ -78,56 +78,56 @@ public sealed class TeraRaidDetail
     private const string General = nameof(General);
     private const string Misc = nameof(Misc);
 
-    [Category(General), Description("Indicates if this entry has an active raid crystal.")]
+    [Category(General), Description("指示此项是否是有活动的团战晶体.")]
     public bool IsEnabled
     {
         get => ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x00)) != 0;
         set => WriteUInt32LittleEndian(Data.AsSpan(Offset + 0x00), value ? 1u : 0);
     }
 
-    [Category(General), Description("Zone the raid crystal is located in.")]
+    [Category(General), Description("团战晶体所在区域.")]
     public uint AreaID
     {
         get => ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x04));
         set => WriteUInt32LittleEndian(Data.AsSpan(Offset + 0x04), value);
     }
 
-    [Category(Misc), Description("Indicates how the crystal is shown on the player's YMAP.")]
+    [Category(Misc), Description("指示晶体如何出现在玩家的地图上.")]
     public TeraRaidDisplayType DisplayType
     {
         get => (TeraRaidDisplayType)ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x08));
         set => WriteUInt32LittleEndian(Data.AsSpan(Offset + 0x08), (uint)value);
     }
 
-    [Category(General), Description("Zone-specific overworld spawn point for the raid crystal.")]
+    [Category(General), Description("团战晶体的特定区域过载点.")]
     public uint SpawnPointID
     {
         get => ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x0C));
         set => WriteUInt32LittleEndian(Data.AsSpan(Offset + 0x0C), value);
     }
 
-    [Category(General), Description("RNG Seed (32bit) for fetching the raid data table and generating the raid."), TypeConverter(typeof(TypeConverterU32))]
+    [Category(General), Description("RNG种子（32位），用于获取raid数据表并生成raid."), TypeConverter(typeof(TypeConverterU32))]
     public uint Seed
     {
         get => ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x10));
         set => WriteUInt32LittleEndian(Data.AsSpan(Offset + 0x10), value);
     }
 
-    [Category(Misc), Description("Always zero.")]
+    [Category(Misc), Description("始终为零.")]
     public uint Unused
     {
         get => ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x14));
         set => WriteUInt32LittleEndian(Data.AsSpan(Offset + 0x14), value);
     }
 
-    [Category(General), Description("Indicates the source of the raid encounter data and rewards.")]
+    [Category(General), Description("指示团战遭遇数据和奖励的来源.")]
     public TeraRaidContentType Content
     {
         get => (TeraRaidContentType)ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x18));
         set => WriteUInt32LittleEndian(Data.AsSpan(Offset + 0x18), (uint)value);
     }
 
-    [Category(Misc), Description("Has player already collected the League Points for this raid?")]
+    [Category(Misc), Description("玩家已经收集了这次团战的联盟支付点了吗？")]
     public bool IsClaimedLeaguePoints
     {
         get => ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x1C)) != 0;
@@ -137,15 +137,15 @@ public sealed class TeraRaidDetail
 
 public enum TeraRaidDisplayType : uint
 {
-    None = 0,
-    Unrestricted = 1,
-    RequiresRide = 2,
+    无 = 0,
+    无限制的 = 1,
+    需要坐骑 = 2,
 }
 
 public enum TeraRaidContentType : uint
 {
-    Base05,
-    Black6,
-    Distribution,
-    Might7,
+    一至五星,
+    六星,
+    分配,
+    七星,
 }
