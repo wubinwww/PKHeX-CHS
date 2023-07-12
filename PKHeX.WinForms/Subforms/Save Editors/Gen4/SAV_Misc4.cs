@@ -582,7 +582,7 @@ public partial class SAV_Misc4 : Form
         if (facility == 0)
         {
             StatLabelA[1].Visible = StatLabelA[1].Enabled = StatNUDA[1].Visible = StatNUDA[1].Enabled = true;
-            StatLabelA[1].Text = "Continue";
+            StatLabelA[1].Text = "继续";
             StatNUDA[1].Maximum = 65535;
         }
         else
@@ -590,7 +590,7 @@ public partial class SAV_Misc4 : Form
             if (StatNUDA[1].Value > 9999) StatNUDA[1].Value = 9999;
             StatNUDA[1].Maximum = 9999;
         }
-        if (facility == 1) StatLabelA[1].Text = StatLabelA[3].Text = "Trade";
+        if (facility == 1) StatLabelA[1].Text = StatLabelA[3].Text = "交换";
         if (facility == 3) StatLabelA[1].Text = StatLabelA[3].Text = "CP";
         GB_Hall.Visible = facility == 2;
         GB_Castle.Visible = facility == 3;
@@ -608,14 +608,14 @@ public partial class SAV_Misc4 : Form
         StatAddrControl(SetValToSav: -2, SetSavToVal: true);
         if (GB_Hall.Visible)
         {
-            GB_Hall.Text = $"Battle Hall ({(string)CB_Stats2.SelectedItem})";
+            GB_Hall.Text = $"对战舞台 ({(string)CB_Stats2.SelectedItem})";
             editing = true;
             GetHallStat();
             editing = false;
         }
         else if (GB_Castle.Visible)
         {
-            GB_Castle.Text = $"Battle Castle ({(string)CB_Stats2.SelectedItem})";
+            GB_Castle.Text = $"对战城堡 ({(string)CB_Stats2.SelectedItem})";
             editing = true;
             GetCastleStat();
             editing = false;
@@ -754,8 +754,8 @@ public partial class SAV_Misc4 : Form
         bool c = curspe == species;
         CHK_HallCurrent.Checked = c;
         CHK_HallCurrent.Text = curspe > 0 && curspe <= SAV.MaxSpeciesID
-            ? $"Current: {SpeciesName.GetSpeciesName(curspe, GameLanguage.GetLanguageIndex(Main.CurrentLanguage))}"
-            : "Current: (none)";
+            ? $"当前的: {SpeciesName.GetSpeciesName(curspe, GameLanguage.GetLanguageIndex(Main.CurrentLanguage))}"
+            : "当前的: (无)";
 
         int s = 0;
         for (int i = 0; i < HallNUDA.Length; i++)
