@@ -78,35 +78,35 @@ public sealed class RaidSpawnDetail
     private const string General = nameof(General);
     private const string Derived = nameof(Derived);
 
-    [Category(General), Description("FNV Hash for fetching the Raid data table (64bit)."), TypeConverter(typeof(TypeConverterU64))]
+    [Category(General), Description("用于获取Raid数据表的FNV哈希（64位）."), TypeConverter(typeof(TypeConverterU64))]
     public ulong Hash
     {
         get => ReadUInt64LittleEndian(Data.AsSpan(Offset + 0));
         set => WriteUInt64LittleEndian(Data.AsSpan(Offset + 0), value);
     }
 
-    [Category(General), Description("RNG Seed for generating the Raid's content (64bit)."), TypeConverter(typeof(TypeConverterU64))]
+    [Category(General), Description("用于生成Raid内容的RNG种子（64位）."), TypeConverter(typeof(TypeConverterU64))]
     public ulong Seed
     {
         get => ReadUInt64LittleEndian(Data.AsSpan(Offset + 8));
         set => WriteUInt64LittleEndian(Data.AsSpan(Offset + 8), value);
     }
 
-    [Category(General), Description("Star Count for the Raid's content (0-4).")]
+    [Category(General), Description("Raid内容的星数(0-4).")]
     public byte Stars
     {
         get => Data[Offset + 0x10];
         set => Data[Offset + 0x10] = value;
     }
 
-    [Category(General), Description("Random value which picks out the encounter from the Raid data table (1-100).")]
+    [Category(General), Description("从Raid数据表中挑选遭遇精灵的随机值(1-100).")]
     public byte RandRoll
     {
         get => Data[Offset + 0x11];
         set => Data[Offset + 0x11] = value;
     }
 
-    [Category(General), Description("First set of Den Flags.")]
+    [Category(General), Description("第一组巢穴旗帜.")]
     public RaidType DenType
     {
         get => (RaidType)Data[Offset + 0x12];
@@ -124,17 +124,17 @@ public sealed class RaidSpawnDetail
         }
     }
 
-    [Category(General), Description("Second set of Den Flags.")]
+    [Category(General), Description("第二组巢穴旗帜.")]
     public byte Flags
     {
         get => Data[Offset + 0x13];
         set => Data[Offset + 0x13] = value;
     }
 
-    [Category(Derived), Description("Active Nest")]
+    [Category(Derived), Description("活动巢穴")]
     public bool IsActive => DenType > 0;
 
-    [Category(Derived), Description("Rare encounter details used instead of Common details.")]
+    [Category(Derived), Description("使用稀有的遭遇代替普通遭遇.")]
     public bool IsRare
     {
         get => DenType is RaidType.Rare or RaidType.RareWish;
@@ -151,7 +151,7 @@ public sealed class RaidSpawnDetail
         }
     }
 
-    [Category(Derived), Description("Wishing Piece was used for Raid encounter.")]
+    [Category(Derived), Description("许愿星被用于Raid遭遇战.")]
     public bool IsWishingPiece
     {
         get => DenType is RaidType.CommonWish or RaidType.RareWish;
@@ -168,14 +168,14 @@ public sealed class RaidSpawnDetail
         }
     }
 
-    [Category(Derived), Description("Has watts already been harvested.")]
+    [Category(Derived), Description("瓦特已经获取了吗?")]
     public bool WattsHarvested
     {
         get => IsActive && (Flags & 1) == 1;
         set => Flags = (byte)((Flags & ~1) | (value ? 1 : 0));
     }
 
-    [Category(Derived), Description("Distribution (event) details used for Raid encounter.")]
+    [Category(Derived), Description("用于Raid遭遇的分布(事件)详细信息.")]
     public bool IsEvent
     {
         get => IsActive && (Flags & 2) == 2;
