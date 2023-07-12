@@ -1,10 +1,10 @@
-﻿namespace PKHeX.Core;
+namespace PKHeX.Core;
 
 public enum SecretBase6Rank
 {
-    Default = 0,
-    Bronze = 1,
-    Silver = 2,
-    Gold = 3,
-    Platinum = 4,
+    默认 = 0,
+    青铜 = 1,
+    白银 = 2,
+    黄金 = 3,
+    铂金 = 4,
 }
