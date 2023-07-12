@@ -8,28 +8,28 @@ public sealed class OPower6 : SaveBlock<SAV6>
     private static readonly OPowerFlagSet[] Mapping =
     {
         // Skip unused byte
-        new(5, Hatching) {Offset = 1},
-        new(5, Bargain) {Offset = 6},
-        new(5, Prize_Money) {Offset = 11},
-        new(5, Exp_Point) {Offset = 16},
-        new(5, Capture) {Offset = 21},
+        new(5, 孵蛋之力) {Offset = 1},
+        new(5, 优惠之力) {Offset = 6},
+        new(5, 零花钱之力) {Offset = 11},
+        new(5, 经验之力) {Offset = 16},
+        new(5, 捕获之力) {Offset = 21},
 
-        new(3, Encounter) {Offset = 26},
-        new(3, Stealth) {Offset = 29},
-        new(3, HP_Restoring) {Offset = 32},
-        new(3, PP_Restoring) {Offset = 35},
+        new(3, 相遇之力) {Offset = 26},
+        new(3, 隐身之力) {Offset = 29},
+        new(3, HP回复之力) {Offset = 32},
+        new(3, PP回复之力) {Offset = 35},
 
-        new(1, Full_Recovery) {Offset = 38},
+        new(1, 完全回复之力) {Offset = 38},
 
-        new(5, Befriending) {Offset = 39},
+        new(5, 亲密之力) {Offset = 39},
 
-        new(3, Attack) {Offset = 44},
-        new(3, Defense) {Offset = 47},
-        new(3, Sp_Attack) {Offset = 50},
-        new(3, Sp_Defense) {Offset = 53},
-        new(3, Speed) {Offset = 56},
-        new(3, Critical) {Offset = 59},
-        new(3, Accuracy) {Offset = 62},
+        new(3, 攻击之力) {Offset = 44},
+        new(3, 防御之力) {Offset = 47},
+        new(3, 特攻之力) {Offset = 50},
+        new(3, 特防之力) {Offset = 53},
+        new(3, 速度之力) {Offset = 56},
+        new(3, 要害之力) {Offset = 59},
+        new(3, 命中之力) {Offset = 62},
     };
 
     public OPower6(SAV6XY sav, int offset) : base(sav) => Offset = offset;

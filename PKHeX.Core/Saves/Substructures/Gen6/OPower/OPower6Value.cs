@@ -1,8 +1,8 @@
-﻿namespace PKHeX.Core;
+namespace PKHeX.Core;
 
 public enum OPower6Value
 {
-    Locked,
+    未解锁,
     Lv1,
     Lv2,
     Lv3,
