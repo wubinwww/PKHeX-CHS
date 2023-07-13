@@ -89,9 +89,9 @@ public partial class SAV_Trainer7 : Form
     {
         var alolatime_list = new ComboItem[24];
         for (int i = 1; i < alolatime_list.Length; i++)
-            alolatime_list[i] = new ComboItem($"+{i:00} Hours", i * 60 * 60);
-        alolatime_list[0] = new ComboItem("Sun Time", 24 * 60 * 60);
-        alolatime_list[12] = new ComboItem("Moon Time", 12 * 60 * 60);
+            alolatime_list[i] = new ComboItem($"+{i:00} 小时", i * 60 * 60);
+        alolatime_list[0] = new ComboItem("日版 时间", 24 * 60 * 60);
+        alolatime_list[12] = new ComboItem("月版 时间", 12 * 60 * 60);
         return alolatime_list;
     }
 
