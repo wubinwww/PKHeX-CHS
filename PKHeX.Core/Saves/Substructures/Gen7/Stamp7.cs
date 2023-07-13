@@ -1,20 +1,20 @@
-﻿namespace PKHeX.Core;
+namespace PKHeX.Core;
 
 public enum Stamp7
 {
-    Official_Pokemon_Trainer,
-    Melemele_Trial_Completion,
-    Akala_Trial_Completion,
-    Ula_ula_Trial_Completion,
-    Poni_Trial_Completion,
-    Island_Challenge_Completion,
-    Melemele_Pokedex_Completion,
-    Akala_Pokedex_Completion,
-    Ula_ula_Pokedex_Completion,
-    Poni_Pokedex_Completion,
-    Alola_Pokedex_Completion,
-    _50_Consecutive_Single_Battle_Wins,
-    _50_Consecutive_Double_Battle_Wins,
-    _50_Consecutive_Multi_Battle_Wins,
-    Poke_Finder_Pro,
+    训练家之证,
+    美乐美乐的考验完成,
+    阿卡拉的考验完成,
+    乌拉乌拉的考验完成,
+    波尼的考验完成,
+    诸岛巡礼完成,
+    美乐美乐图鉴完成,
+    阿卡拉图鉴完成,
+    乌拉乌拉图鉴完成,
+    波尼图鉴完成,
+    阿罗拉图鉴完成,
+    单打对战50连胜通过,
+    双打对战50连胜通过,
+    多人对战50连胜通过,
+    宝可梦搜寻镜大师认真,
 }
