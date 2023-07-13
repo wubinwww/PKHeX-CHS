@@ -422,7 +422,7 @@ namespace PKHeX.WinForms
             // 
             CB_Game.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             CB_Game.FormattingEnabled = true;
-            CB_Game.Items.AddRange(new object[] { "Sword", "Shield" });
+            CB_Game.Items.AddRange(new object[] { "剑", "盾" });
             CB_Game.Location = new System.Drawing.Point(164, 89);
             CB_Game.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             CB_Game.Name = "CB_Game";
