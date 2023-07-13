@@ -78,28 +78,28 @@ public sealed class RaidSpawnDetail
     private const string General = nameof(General);
     private const string Derived = nameof(Derived);
 
-    [Category(General), Description("用于获取Raid数据表的FNV哈希（64位）."), TypeConverter(typeof(TypeConverterU64))]
+    [Category(General), Description("用于获取团战数据表的FNV哈希算法（64位）."), TypeConverter(typeof(TypeConverterU64))]
     public ulong Hash
     {
         get => ReadUInt64LittleEndian(Data.AsSpan(Offset + 0));
         set => WriteUInt64LittleEndian(Data.AsSpan(Offset + 0), value);
     }
 
-    [Category(General), Description("用于生成Raid内容的RNG种子（64位）."), TypeConverter(typeof(TypeConverterU64))]
+    [Category(General), Description("用于生成团战内容的RNG种子（64位）."), TypeConverter(typeof(TypeConverterU64))]
     public ulong Seed
     {
         get => ReadUInt64LittleEndian(Data.AsSpan(Offset + 8));
         set => WriteUInt64LittleEndian(Data.AsSpan(Offset + 8), value);
     }
 
-    [Category(General), Description("Raid内容的星数(0-4).")]
+    [Category(General), Description("团战内容的星数(0-4).")]
     public byte Stars
     {
         get => Data[Offset + 0x10];
         set => Data[Offset + 0x10] = value;
     }
 
-    [Category(General), Description("从Raid数据表中挑选遭遇精灵的随机值(1-100).")]
+    [Category(General), Description("从团战数据表中挑选遭遇精灵的随机值(1-100).")]
     public byte RandRoll
     {
         get => Data[Offset + 0x11];
@@ -151,7 +151,7 @@ public sealed class RaidSpawnDetail
         }
     }
 
-    [Category(Derived), Description("许愿星被用于Raid遭遇战.")]
+    [Category(Derived), Description("许愿星被用于团队遭遇战.")]
     public bool IsWishingPiece
     {
         get => DenType is RaidType.CommonWish or RaidType.RareWish;
@@ -175,7 +175,7 @@ public sealed class RaidSpawnDetail
         set => Flags = (byte)((Flags & ~1) | (value ? 1 : 0));
     }
 
-    [Category(Derived), Description("用于Raid遭遇的分布(事件)详细信息.")]
+    [Category(Derived), Description("用于团战遭遇的分布(事件)详细信息.")]
     public bool IsEvent
     {
         get => IsActive && (Flags & 2) == 2;
