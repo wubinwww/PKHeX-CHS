@@ -49,7 +49,7 @@ public partial class SAV_BoxLayout : Form
         static void AddPlaceholder(ComboBox cb, int count)
         {
             for (int i = 1; i <= count; i++)
-                cb.Items.Add($"Wallpaper {i}");
+                cb.Items.Add($"壁纸 {i}");
         }
 
         var names = GameInfo.Strings.wallpapernames;
