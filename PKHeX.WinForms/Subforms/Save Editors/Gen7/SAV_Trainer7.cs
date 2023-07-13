@@ -252,7 +252,7 @@ public partial class SAV_Trainer7 : Form
             75,332,334,
             331,333,335,336,
         };
-        string[] FlyDestAltName = { "My House", "Photo Club (Hau'oli)", "Photo Club (Konikoni)" };
+        string[] FlyDestAltName = { "自家", "阿罗拉摄影俱乐部 (好奥乐)", "阿罗拉摄影俱乐部 (可霓可)" };
         CLB_FlyDest.Items.Clear();
         for (int i = 0, u = 0, m = FlyDestNameIndex.Length - (SAV is SAV7USUM ? 0 : 6); i < m; i++)
         {
@@ -277,7 +277,7 @@ public partial class SAV_Trainer7 : Form
             181,
             409,297,32,296,
         };
-        string[] MapUnmaskAltName = { "Melemele Sea (East)", "Melemele Sea (West)" };
+        string[] MapUnmaskAltName = { "美乐美乐海 (东)", "美乐美乐海 (西)" };
         CLB_MapUnmask.Items.Clear();
         for (int i = 0, u = 0, m = MapUnmaskNameIndex.Length - (SAV is SAV7USUM ? 0 : 4); i < m; i++)
         {
