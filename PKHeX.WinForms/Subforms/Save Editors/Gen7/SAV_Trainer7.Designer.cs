@@ -563,7 +563,7 @@ namespace PKHeX.WinForms
             // 
             CB_Game.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             CB_Game.FormattingEnabled = true;
-            CB_Game.Items.AddRange(new object[] { "Sun", "Moon", "US", "UM" });
+            CB_Game.Items.AddRange(new object[] { "日", "月", "究极之日", "究极之月" });
             CB_Game.Location = new System.Drawing.Point(164, 59);
             CB_Game.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             CB_Game.Name = "CB_Game";
@@ -1759,7 +1759,7 @@ namespace PKHeX.WinForms
             // 
             CB_Fashion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             CB_Fashion.FormattingEnabled = true;
-            CB_Fashion.Items.AddRange(new object[] { "New Game", "All Legal", "Everything" });
+            CB_Fashion.Items.AddRange(new object[] { "新游戏", "所有合法", "所有" });
             CB_Fashion.Location = new System.Drawing.Point(36, 88);
             CB_Fashion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             CB_Fashion.Name = "CB_Fashion";
