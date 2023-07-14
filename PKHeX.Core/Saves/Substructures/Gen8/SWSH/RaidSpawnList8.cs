@@ -106,25 +106,25 @@ public sealed class RaidSpawnDetail
         set => Data[Offset + 0x11] = value;
     }
 
-    [Category(General), Description("第一组巢穴旗帜.")]
+    [Category(General), Description("巢穴种类.")]
     public RaidType DenType
     {
         get => (RaidType)Data[Offset + 0x12];
         set
         {
             Data[Offset + 0x12] = (byte)value;
-            if (value == RaidType.Event)
+            if (value == RaidType.活动)
             {
                 IsEvent = true;
             }
-            else if (value != RaidType.CommonWish)
+            else if (value != RaidType.许愿星普通)
             {
                 IsEvent = false;
             }
         }
     }
 
-    [Category(General), Description("第二组巢穴旗帜.")]
+    [Category(General), Description("巢穴旗帜.")]
     public byte Flags
     {
         get => Data[Offset + 0x13];
@@ -137,16 +137,16 @@ public sealed class RaidSpawnDetail
     [Category(Derived), Description("使用稀有的遭遇代替普通遭遇.")]
     public bool IsRare
     {
-        get => DenType is RaidType.Rare or RaidType.RareWish;
+        get => DenType is RaidType.稀有 or RaidType.许愿星稀有;
         set
         {
             if (value)
             {
-                DenType = IsWishingPiece ? RaidType.RareWish : RaidType.Rare;
+                DenType = IsWishingPiece ? RaidType.许愿星稀有 : RaidType.稀有;
             }
             else
             {
-                DenType = IsWishingPiece ? RaidType.CommonWish : RaidType.Common;
+                DenType = IsWishingPiece ? RaidType.许愿星普通 : RaidType.普通;
             }
         }
     }
@@ -154,16 +154,16 @@ public sealed class RaidSpawnDetail
     [Category(Derived), Description("许愿星被用于团队遭遇战.")]
     public bool IsWishingPiece
     {
-        get => DenType is RaidType.CommonWish or RaidType.RareWish;
+        get => DenType is RaidType.许愿星普通 or RaidType.许愿星稀有;
         set
         {
             if (value)
             {
-                DenType = IsRare ? RaidType.RareWish : RaidType.CommonWish;
+                DenType = IsRare ? RaidType.许愿星稀有 : RaidType.许愿星普通;
             }
             else
             {
-                DenType = IsRare ? RaidType.Rare : RaidType.Common;
+                DenType = IsRare ? RaidType.稀有 : RaidType.普通;
             }
         }
     }
@@ -184,16 +184,16 @@ public sealed class RaidSpawnDetail
             Flags = (byte)((Flags & ~2) | (value ? 2 : 0));
             if (value)
             {
-                if (DenType != RaidType.CommonWish && DenType != RaidType.Event)
+                if (DenType != RaidType.许愿星普通 && DenType != RaidType.活动)
                 {
-                    DenType = RaidType.Event;
+                    DenType = RaidType.活动;
                 }
             }
             else
             {
-                if (DenType == RaidType.Event)
+                if (DenType == RaidType.活动)
                 {
-                    DenType = RaidType.Common;
+                    DenType = RaidType.普通;
                 }
             }
         }
@@ -209,7 +209,7 @@ public sealed class RaidSpawnDetail
 
     public void Deactivate()
     {
-        DenType = RaidType.None;
+        DenType = RaidType.无;
         Stars = 0;
         RandRoll = 0;
     }
@@ -221,11 +221,11 @@ public sealed class RaidSpawnDetail
 
 public enum RaidType : byte
 {
-    None = 0,
-    Common = 1,
-    Rare = 2,
-    CommonWish = 3,
-    RareWish = 4,
-    Event = 5,
-    DynamaxCrystal = 6,
+    无 = 0,
+    普通 = 1,
+    稀有 = 2,
+    许愿星普通 = 3,
+    许愿星稀有 = 4,
+    活动 = 5,
+    极巨结晶 = 6,
 }
