@@ -28,9 +28,9 @@ public sealed class Zukan4 : ZukanBase<SAV4>
     * assuming the species is seen, (bit1 ^ bit2) + 1 = genders in dex
     */
 
-    public const string GENDERLESS = "Genderless";
-    public const string MALE = "Male";
-    public const string FEMALE = "Female";
+    public const string GENDERLESS = "无性别";
+    public const string MALE = "公";
+    public const string FEMALE = "母";
     private const int SIZE_REGION = 0x40;
     private const int COUNT_REGION = 4;
     private const int OFS_SPINDA = sizeof(uint) + (COUNT_REGION * SIZE_REGION);
