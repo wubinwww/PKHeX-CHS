@@ -40,7 +40,7 @@ public sealed class SevenStarRaidDetail
 
     private const string General = nameof(General);
 
-    [Category(General), Description("用于此7星团体战的标识符。与这次突袭的首次发布日期相符.")]
+    [Category(General), Description("用于此七星团体战的活动时间。需与这次活动的首次发布日期相符.")]
     public uint Identifier
     {
         get => ReadUInt32LittleEndian(Data.AsSpan(Offset + 0x00));
