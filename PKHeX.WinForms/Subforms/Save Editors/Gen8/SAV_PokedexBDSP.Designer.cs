@@ -1,4 +1,4 @@
-﻿namespace PKHeX.WinForms
+namespace PKHeX.WinForms
 {
     partial class SAV_PokedexBDSP
     {
@@ -345,35 +345,35 @@
             // 
             mnuSeenNone.Name = "mnuSeenNone";
             mnuSeenNone.Size = new System.Drawing.Size(149, 22);
-            mnuSeenNone.Text = "Seen none";
+            mnuSeenNone.Text = "从未看到";
             mnuSeenNone.Click += ModifyAll;
             // 
             // mnuSeenAll
             // 
             mnuSeenAll.Name = "mnuSeenAll";
             mnuSeenAll.Size = new System.Drawing.Size(149, 22);
-            mnuSeenAll.Text = "Seen all";
+            mnuSeenAll.Text = "全部看到";
             mnuSeenAll.Click += ModifyAll;
             // 
             // mnuCaughtNone
             // 
             mnuCaughtNone.Name = "mnuCaughtNone";
             mnuCaughtNone.Size = new System.Drawing.Size(149, 22);
-            mnuCaughtNone.Text = "Caught none";
+            mnuCaughtNone.Text = "从未抓到";
             mnuCaughtNone.Click += ModifyAll;
             // 
             // mnuCaughtAll
             // 
             mnuCaughtAll.Name = "mnuCaughtAll";
             mnuCaughtAll.Size = new System.Drawing.Size(149, 22);
-            mnuCaughtAll.Text = "Caught all";
+            mnuCaughtAll.Text = "全部捕获";
             mnuCaughtAll.Click += ModifyAll;
             // 
             // mnuComplete
             // 
             mnuComplete.Name = "mnuComplete";
             mnuComplete.Size = new System.Drawing.Size(149, 22);
-            mnuComplete.Text = "Complete Dex";
+            mnuComplete.Text = "完整的图鉴";
             mnuComplete.Click += ModifyAll;
             // 
             // CLB_FormRegular
@@ -426,21 +426,21 @@
             // 
             mnuFormNone.Name = "mnuFormNone";
             mnuFormNone.Size = new System.Drawing.Size(153, 22);
-            mnuFormNone.Text = "Seen none";
+            mnuFormNone.Text = "从未看到";
             mnuFormNone.Click += ModifyAllForms;
             // 
             // mnuFormAllRegular
             // 
             mnuFormAllRegular.Name = "mnuFormAllRegular";
             mnuFormAllRegular.Size = new System.Drawing.Size(153, 22);
-            mnuFormAllRegular.Text = "Seen all";
+            mnuFormAllRegular.Text = "全部看到";
             mnuFormAllRegular.Click += ModifyAllForms;
             // 
             // mnuFormAllShinies
             // 
             mnuFormAllShinies.Name = "mnuFormAllShinies";
             mnuFormAllShinies.Size = new System.Drawing.Size(153, 22);
-            mnuFormAllShinies.Text = "Seen all shinies";
+            mnuFormAllShinies.Text = "看到所有异色";
             mnuFormAllShinies.Click += ModifyAllForms;
             // 
             // CB_State
@@ -450,7 +450,7 @@
             CB_State.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             CB_State.DropDownWidth = 95;
             CB_State.FormattingEnabled = true;
-            CB_State.Items.AddRange(new object[] { "None", "Heard Of", "Seen", "Captured" });
+            CB_State.Items.AddRange(new object[] { "无", "听过", "见过", "捕获" });
             CB_State.Location = new System.Drawing.Point(173, 53);
             CB_State.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             CB_State.Name = "CB_State";
