@@ -122,17 +122,17 @@ public partial class SAV_MailBox : Form
             CB_AuthorVersion.InitializeBinding();
             CB_AuthorVersion.DataSource = new BindingSource(Gen == 4
                 ? new[] {
-                    new ComboItem("Diamond", (int)GameVersion.D),
-                    new ComboItem("Pearl", (int)GameVersion.P),
-                    new ComboItem("Platinum", (int)GameVersion.Pt),
-                    new ComboItem("HeartGold", (int)GameVersion.HG),
-                    new ComboItem("SoulSilver", (int)GameVersion.SS),
+                    new ComboItem("钻石", (int)GameVersion.D),
+                    new ComboItem("珍珠", (int)GameVersion.P),
+                    new ComboItem("白金", (int)GameVersion.Pt),
+                    new ComboItem("心金", (int)GameVersion.HG),
+                    new ComboItem("魂银", (int)GameVersion.SS),
                 }
                 : new[] {
-                    new ComboItem("Black", (int)GameVersion.B),
-                    new ComboItem("White", (int)GameVersion.W),
-                    new ComboItem("Black2", (int)GameVersion.B2),
-                    new ComboItem("White2", (int)GameVersion.W2),
+                    new ComboItem("黑", (int)GameVersion.B),
+                    new ComboItem("白", (int)GameVersion.W),
+                    new ComboItem("黑2", (int)GameVersion.B2),
+                    new ComboItem("白2", (int)GameVersion.W2),
                 }, null);
 
             CB_AuthorLang.Items.Clear();
@@ -207,7 +207,7 @@ public partial class SAV_MailBox : Form
             if (isInit)
                 PKMLabels[i].Text = GetSpeciesNameFromCB(p[i].Species);
             int j = Array.IndexOf(MailItemID, p[i].HeldItem);
-            PKMHeldItems[i].Text = j >= 0 ? CB_MailType.Items[j + 1].ToString() : "(not Mail)";
+            PKMHeldItems[i].Text = j >= 0 ? CB_MailType.Items[j + 1].ToString() : "(非邮件)";
             if (Gen != 3)
                 continue;
             int k = ((PK3)p[i]).HeldMailID;
