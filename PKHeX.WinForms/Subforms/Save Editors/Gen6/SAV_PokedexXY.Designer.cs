@@ -1,4 +1,4 @@
-﻿namespace PKHeX.WinForms
+namespace PKHeX.WinForms
 {
     partial class SAV_PokedexXY
     {
@@ -449,35 +449,35 @@
             // 
             mnuSeenNone.Name = "mnuSeenNone";
             mnuSeenNone.Size = new System.Drawing.Size(149, 22);
-            mnuSeenNone.Text = "Seen none";
+            mnuSeenNone.Text = "从未看到";
             mnuSeenNone.Click += ModifyAll;
             // 
             // mnuSeenAll
             // 
             mnuSeenAll.Name = "mnuSeenAll";
             mnuSeenAll.Size = new System.Drawing.Size(149, 22);
-            mnuSeenAll.Text = "Seen all";
+            mnuSeenAll.Text = "全部看到";
             mnuSeenAll.Click += ModifyAll;
             // 
             // mnuCaughtNone
             // 
             mnuCaughtNone.Name = "mnuCaughtNone";
             mnuCaughtNone.Size = new System.Drawing.Size(149, 22);
-            mnuCaughtNone.Text = "Caught none";
+            mnuCaughtNone.Text = "从未抓到";
             mnuCaughtNone.Click += ModifyAll;
             // 
             // mnuCaughtAll
             // 
             mnuCaughtAll.Name = "mnuCaughtAll";
             mnuCaughtAll.Size = new System.Drawing.Size(149, 22);
-            mnuCaughtAll.Text = "Caught all";
+            mnuCaughtAll.Text = "全部捕获";
             mnuCaughtAll.Click += ModifyAll;
             // 
             // mnuComplete
             // 
             mnuComplete.Name = "mnuComplete";
             mnuComplete.Size = new System.Drawing.Size(149, 22);
-            mnuComplete.Text = "Complete Dex";
+            mnuComplete.Text = "完整的图鉴";
             mnuComplete.Click += ModifyAll;
             // 
             // B_ModifyForms
@@ -542,21 +542,21 @@
             // 
             mnuFormNone.Name = "mnuFormNone";
             mnuFormNone.Size = new System.Drawing.Size(129, 22);
-            mnuFormNone.Text = "Seen none";
+            mnuFormNone.Text = "从未看到";
             mnuFormNone.Click += ModifyAllForms;
             // 
             // mnuForm1
             // 
             mnuForm1.Name = "mnuForm1";
             mnuForm1.Size = new System.Drawing.Size(129, 22);
-            mnuForm1.Text = "Seen one";
+            mnuForm1.Text = "看到一个";
             mnuForm1.Click += ModifyAllForms;
             // 
             // mnuFormAll
             // 
             mnuFormAll.Name = "mnuFormAll";
             mnuFormAll.Size = new System.Drawing.Size(129, 22);
-            mnuFormAll.Text = "Seen all";
+            mnuFormAll.Text = "全部看到";
             mnuFormAll.Click += ModifyAllForms;
             // 
             // SAV_PokedexXY
