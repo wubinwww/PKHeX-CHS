@@ -35,7 +35,7 @@ public partial class SAV_Pokedex4 : Form
         editing = false;
         LB_Species.SelectedIndex = 0;
 
-        string[] dexMode = { "not given", "simple mode", "detect forms", "national dex", "other languages" };
+        string[] dexMode = { "未授予的", "简单模式", "检测表单", "全国图鉴", "其他语言" };
         if (SAV is SAV4HGSS) dexMode = dexMode.Where((_, i) => i != 2).ToArray();
         foreach (string mode in dexMode)
             CB_DexUpgraded.Items.Add(mode);
