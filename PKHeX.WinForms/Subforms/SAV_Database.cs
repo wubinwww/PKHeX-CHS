@@ -101,16 +101,16 @@ public partial class SAV_Database : Form
 
         // Load Data
         B_Search.Enabled = false;
-        L_Count.Text = "Loading...";
+        L_Count.Text = "加载...";
         var task = new Task(LoadDatabase);
         task.ContinueWith(z =>
         {
             if (!z.IsFaulted)
                 return;
-            Invoke((MethodInvoker)(() => L_Count.Text = "Failed."));
+            Invoke((MethodInvoker)(() => L_Count.Text = "失败."));
             if (z.Exception == null)
                 return;
-            WinFormsUtil.Error("Loading database failed.", z.Exception.InnerException ?? new Exception(z.Exception.Message));
+            WinFormsUtil.Error("加载数据库失败.", z.Exception.InnerException ?? new Exception(z.Exception.Message));
         });
         task.Start();
 
