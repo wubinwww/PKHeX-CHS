@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using PKHeX.Core;
 
@@ -18,7 +18,7 @@ public partial class SAV_Apricorn : Form
     private readonly SAV4HGSS Origin;
     private readonly SAV4HGSS SAV;
     private const int Count = 7;
-    private static readonly string[] itemlist = { "Red", "Yellow", "Blue", "Green", "Pink", "White", "Black" };
+    private static readonly string[] itemlist = { "红球果", "黄球果", "蓝球果", "绿球果", "粉球果", "白球果", "黑球果" };
 
     private void Setup()
     {
