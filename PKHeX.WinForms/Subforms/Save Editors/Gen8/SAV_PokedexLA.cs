@@ -284,8 +284,8 @@ public partial class SAV_PokedexLA : Form
         var minTheoryWeight = PA8.GetWeightAbsolute(pi, 0x00, 0x00).ToString(CultureInfo.InvariantCulture);
         var maxTheoryWeight = PA8.GetWeightAbsolute(pi, 0xFF, 0xFF).ToString(CultureInfo.InvariantCulture);
 
-        L_TheoryHeight.Text = $"Min: {minTheoryHeight}, Max: {maxTheoryHeight}";
-        L_TheoryWeight.Text = $"Min: {minTheoryWeight}, Max: {maxTheoryWeight}";
+        L_TheoryHeight.Text = $"最小: {minTheoryHeight}, 最大: {maxTheoryHeight}";
+        L_TheoryWeight.Text = $"最小: {minTheoryWeight}, 最大: {maxTheoryWeight}";
     }
 
     private bool IsEntryEmpty(int index, int formIndex)
