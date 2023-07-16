@@ -63,7 +63,7 @@ public partial class SettingsEditor : Form
     {
         try
         {
-            var dr = WinFormsUtil.Prompt(MessageBoxButtons.YesNo, "Resetting settings requires the program to exit.", MessageStrings.MsgContinue);
+            var dr = WinFormsUtil.Prompt(MessageBoxButtons.YesNo, "重置设置需要程序退出.", MessageStrings.MsgContinue);
             if (dr != DialogResult.Yes)
                 return;
             var path = Main.ConfigPath;
@@ -74,7 +74,7 @@ public partial class SettingsEditor : Form
         }
         catch (Exception ex)
         {
-            WinFormsUtil.Error("Failed to delete settings.", ex.Message);
+            WinFormsUtil.Error("删除设置失败.", ex.Message);
         }
     }
 }
