@@ -54,7 +54,7 @@ namespace PKHeX.WinForms
             L_Blank.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
             L_Blank.Size = new System.Drawing.Size(107, 21);
             L_Blank.TabIndex = 0;
-            L_Blank.Text = "Blank Save Version:";
+            L_Blank.Text = "空白保存存档:";
             // 
             // CB_Blank
             // 
@@ -83,7 +83,7 @@ namespace PKHeX.WinForms
             B_Reset.Name = "B_Reset";
             B_Reset.Size = new System.Drawing.Size(75, 23);
             B_Reset.TabIndex = 4;
-            B_Reset.Text = "Reset All";
+            B_Reset.Text = "全部重置";
             B_Reset.UseVisualStyleBackColor = true;
             // 
             // SettingsEditor
