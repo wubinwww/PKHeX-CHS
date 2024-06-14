@@ -12,8 +12,8 @@ public partial class StatusBrowser : Form
     public bool WasChosen { get; private set; }
     public StatusCondition Choice { get; private set; }
 
+    private readonly int StatusHeight;
     private const int StatusCount = 7;
-    private int StatusHeight { get; }
     private int StatusWidth => StatusHeight;
     private int StatusBrowserWidth => StatusWidth * 2;
 
@@ -32,14 +32,14 @@ public partial class StatusBrowser : Form
             Padding = Padding.Empty,
         };
 
-        Add(GetImage(StatusCondition.None, "None"));
-        Add(GetImage(StatusCondition.Sleep1, "Sleep"), false);
+        Add(GetImage(StatusCondition.无, "无"));
+        Add(GetImage(StatusCondition.睡眠1, "睡眠"), false);
         Add(NUD_Sleep);
-        Add(GetImage(StatusCondition.Poison, "Poison"));
-        Add(GetImage(StatusCondition.Burn, "Burn"));
-        Add(GetImage(StatusCondition.Paralysis, "Paralysis"));
-        Add(GetImage(StatusCondition.Freeze, "Freeze"));
-        Add(GetImage(StatusCondition.PoisonBad, "Toxic"));
+        Add(GetImage(StatusCondition.中毒, "中毒"));
+        Add(GetImage(StatusCondition.灼伤, "灼伤"));
+        Add(GetImage(StatusCondition.麻痹, "麻痹"));
+        Add(GetImage(StatusCondition.冰冻, "冰冻"));
+        Add(GetImage(StatusCondition.剧毒, "剧毒"));
 
         Height = StatusCount * StatusHeight;
         Width = StatusBrowserWidth;
@@ -82,7 +82,7 @@ public partial class StatusBrowser : Form
         pb.MouseEnter += (_, _) => Text = name;
         pb.Click += (_, _) =>
         {
-            if (value is StatusCondition.Sleep1)
+            if (value is StatusCondition.睡眠1)
                 value = (StatusCondition)NUD_Sleep.Value;
             SelectValue(value);
         };

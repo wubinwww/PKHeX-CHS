@@ -1789,7 +1789,7 @@ namespace PKHeX.WinForms.Controls
             CB_MetTimeOfDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             CB_MetTimeOfDay.DropDownWidth = 150;
             CB_MetTimeOfDay.FormattingEnabled = true;
-            CB_MetTimeOfDay.Items.AddRange(new object[] { "(None)", "Morning", "Day", "Night" });
+            CB_MetTimeOfDay.Items.AddRange(new object[] { "(无)", "清晨", "白天", "夜晚" });
             CB_MetTimeOfDay.Location = new System.Drawing.Point(104, 0);
             CB_MetTimeOfDay.Margin = new System.Windows.Forms.Padding(0);
             CB_MetTimeOfDay.Name = "CB_MetTimeOfDay";

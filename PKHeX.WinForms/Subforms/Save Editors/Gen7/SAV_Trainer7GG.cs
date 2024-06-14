@@ -186,7 +186,7 @@ public partial class SAV_Trainer7GG : Form
         var summary = Park.DumpAll(GameInfo.Strings.Species).ToArray();
         if (summary.Length == 0)
         {
-            WinFormsUtil.Alert("No entities present in Go Park to dump.");
+            WinFormsUtil.Alert("Go Park中没有可存储的实体.");
             return;
         }
         WinFormsUtil.SetClipboardText(string.Join(Environment.NewLine, summary));
@@ -198,7 +198,7 @@ public partial class SAV_Trainer7GG : Form
         var gofiles = Park.GetAllEntities().Where(z => z.Species != 0).ToArray();
         if (gofiles.Length == 0)
         {
-            WinFormsUtil.Alert("No entities present in Go Park to dump.");
+            WinFormsUtil.Alert("Go Park中没有可存储的实体.");
             return;
         }
         using var fbd = new FolderBrowserDialog();
@@ -308,14 +308,14 @@ public partial class SAV_Trainer7GG : Form
         int slot = index % GoParkStorage.SlotsPerArea;
 
         var data = Park[index];
-        var prefix = $"Area: {area + 1:00}, Slot: {slot + 1:00}{Environment.NewLine}";
-        var dump = data.Species == 0 ? "Empty" : data.Dump(GameInfo.Strings.Species, index);
+        var prefix = $"地区: {area + 1:00}, 槽位： {slot + 1:00}{Environment.NewLine}";
+        var dump = data.Species == 0 ? "空的" : data.Dump(GameInfo.Strings.Species, index);
         L_GoSlotSummary.Text = prefix + dump;
     }
 
     private void B_DeleteAll_Click(object sender, EventArgs e)
     {
-        if (WinFormsUtil.Prompt(MessageBoxButtons.YesNo, "Delete all slots?") != DialogResult.Yes)
+        if (WinFormsUtil.Prompt(MessageBoxButtons.YesNo, "删除所有槽位?") != DialogResult.Yes)
             return;
 
         Park.DeleteAll();

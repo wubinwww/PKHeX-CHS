@@ -148,7 +148,7 @@ public partial class SAV_Misc4 : Form
             ReadWalker(hgss);
             ReadPokeathlon(hgss);
             L_UGFlags.Visible = NUD_UGFlags.Visible = false;
-            ReadOnlySpan<string> items = ["Map Johto", "Map Johto+", "Map Johto & Kanto"];
+            ReadOnlySpan<string> items = ["城都地图", "城都地图+", "城都 & 关都 地图"];
             var index = hgss.MapUnlockState;
             if (index >= MapUnlockState4.Invalid)
                 index = MapUnlockState4.JohtoKanto;
@@ -206,7 +206,7 @@ public partial class SAV_Misc4 : Form
     {
         CB_CurrentApp.Items.Clear();
         CLB_Poketch.Items.Clear();
-        for (PoketchApp i = 0; i <= PoketchApp.Alarm_Clock; i++)
+        for (PoketchApp i = 0; i <= PoketchApp.闹钟; i++)
         {
             var name = poketchapps[(int)i];
             var title = $"{(int)i:00} - {name}";
@@ -331,8 +331,8 @@ public partial class SAV_Misc4 : Form
             [2, 0, 1, -1, 3], // Max, Current, Current(CP), (UsedCP), Max(CP)
         ];
         BFT = [
-            ["Singles", "Doubles", "Multi"],
-            ["Singles", "Doubles", "Multi (Trainer)", "Multi (Friend)", "Wi-Fi"],
+            ["单打", "双打", "多人"],
+            ["单打", "双打", "多人 (训练师)", "多人 (朋友)", "Wi-Fi"],
         ];
 
         if (SAV is not SAV4DP)
@@ -439,7 +439,7 @@ public partial class SAV_Misc4 : Form
         if (facility == 0)
         {
             StatLabelA[1].Visible = StatLabelA[1].Enabled = StatNUDA[1].Visible = StatNUDA[1].Enabled = true;
-            StatLabelA[1].Text = "Continue";
+            StatLabelA[1].Text = "继续";
             StatNUDA[1].Maximum = 65535;
         }
         else
@@ -450,7 +450,7 @@ public partial class SAV_Misc4 : Form
         }
 
         if (facility == 1)
-            StatLabelA[1].Text = StatLabelA[3].Text = "Trade";
+            StatLabelA[1].Text = StatLabelA[3].Text = "交换";
         else if (facility == 3)
             StatLabelA[1].Text = StatLabelA[3].Text = "CP";
 

@@ -60,7 +60,7 @@ namespace PKHeX.WinForms
             L_Key.Name = "L_Key";
             L_Key.Size = new System.Drawing.Size(37, 13);
             L_Key.TabIndex = 1;
-            L_Key.Text = "Block:";
+            L_Key.Text = "块键:";
             // 
             // TC_Tabs
             // 
@@ -83,7 +83,7 @@ namespace PKHeX.WinForms
             Tab_Blocks.Padding = new System.Windows.Forms.Padding(3);
             Tab_Blocks.Size = new System.Drawing.Size(326, 315);
             Tab_Blocks.TabIndex = 0;
-            Tab_Blocks.Text = "Blocks";
+            Tab_Blocks.Text = "数据块";
             Tab_Blocks.UseVisualStyleBackColor = true;
             // 
             // PG_BlockView
@@ -105,7 +105,7 @@ namespace PKHeX.WinForms
             Raw.Padding = new System.Windows.Forms.Padding(3);
             Raw.Size = new System.Drawing.Size(326, 315);
             Raw.TabIndex = 1;
-            Raw.Text = "Tab_Raw";
+            Raw.Text = "初始选项";
             Raw.UseVisualStyleBackColor = true;
             // 
             // propertyGrid1
@@ -126,7 +126,7 @@ namespace PKHeX.WinForms
             MinimizeBox = false;
             Name = "SAV_Accessor";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "SaveBlock Editor";
+            Text = "存档数据块设置";
             TC_Tabs.ResumeLayout(false);
             Tab_Blocks.ResumeLayout(false);
             Tab_Blocks.PerformLayout();

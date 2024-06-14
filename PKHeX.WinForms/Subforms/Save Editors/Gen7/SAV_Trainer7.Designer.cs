@@ -1759,7 +1759,7 @@ namespace PKHeX.WinForms
             // 
             CB_Fashion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             CB_Fashion.FormattingEnabled = true;
-            CB_Fashion.Items.AddRange(new object[] { "New Game", "All Legal", "Everything" });
+            CB_Fashion.Items.AddRange(new object[] { "新游戏", "所有合法", "所有" });
             CB_Fashion.Location = new System.Drawing.Point(36, 88);
             CB_Fashion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             CB_Fashion.Name = "CB_Fashion";

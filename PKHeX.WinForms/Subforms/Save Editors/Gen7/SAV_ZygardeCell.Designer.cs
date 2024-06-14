@@ -67,7 +67,7 @@
             // dgv_ref
             // 
             dgv_ref.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dgv_ref.HeaderText = "Ref";
+            dgv_ref.HeaderText = "序号";
             dgv_ref.Name = "dgv_ref";
             dgv_ref.ReadOnly = true;
             dgv_ref.Width = 49;
@@ -75,7 +75,7 @@
             // dgv_location
             // 
             dgv_location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dgv_location.HeaderText = "Location";
+            dgv_location.HeaderText = "地点";
             dgv_location.Name = "dgv_location";
             dgv_location.ReadOnly = true;
             dgv_location.Width = 78;
@@ -83,7 +83,7 @@
             // dgv_val
             // 
             dgv_val.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            dgv_val.HeaderText = "Value";
+            dgv_val.HeaderText = "状态";
             dgv_val.Name = "dgv_val";
             dgv_val.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 

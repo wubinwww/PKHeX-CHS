@@ -11,13 +11,14 @@ public partial class SAV_RaidSevenStar9 : Form
     private readonly SAV9SV SAV;
     private readonly RaidSevenStar9 Raids;
 
+
     public SAV_RaidSevenStar9(SAV9SV sav)
     {
         InitializeComponent();
         WinFormsUtil.TranslateInterface(this, Main.CurrentLanguage);
         SAV = (SAV9SV)(Origin = sav).Clone();
         Raids = SAV.RaidSevenStar;
-        CB_Raid.Items.AddRange(Enumerable.Range(1, Raids.CountAll).Select(z => (object)$"Raid {z:0000}").ToArray());
+        CB_Raid.Items.AddRange(Enumerable.Range(1, Raids.CountAll).Select(z => (object)$"太晶洞窟 {z:0000}").ToArray());
         CB_Raid.SelectedIndex = 0;
     }
 

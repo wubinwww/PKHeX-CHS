@@ -457,7 +457,7 @@ namespace PKHeX.WinForms
             mnuView.Image = Properties.Resources.other;
             mnuView.Name = "mnuView";
             mnuView.Size = new System.Drawing.Size(99, 22);
-            mnuView.Text = "View";
+            mnuView.Text = "查看";
             mnuView.Click += ClickView;
             // 
             // TC_SearchOptions

@@ -1,4 +1,4 @@
-﻿namespace PKHeX.WinForms
+namespace PKHeX.WinForms
 {
     partial class SAV_HoneyTree
     {
@@ -79,7 +79,7 @@
             // CB_TreeList
             // 
             CB_TreeList.FormattingEnabled = true;
-            CB_TreeList.Items.AddRange(new object[] { "Route 205, Floaroma Town side", "Route 205, Eterna City side", "Route 206", "Route 207", "Route 208", "Route 209", "Route 210, Solaceon Town side", "Route 210, Celestic Town side", "Route 211", "Route 212, Hearthome City side", "Route 212, Pastoria City side", "Route 213", "Route 214", "Route 215", "Route 218", "Route 221", "Route 222", "Valley Windworks", "Eterna Forest", "Fuego Ironworks", "Floaroma Meadow" });
+            CB_TreeList.Items.AddRange(new object[] { "205号道路, 花苑镇旁", "205号道路, 百代市旁", "206号道路", "207号道路", "208号道路", "209号道路", "210号道路, 随意镇旁", "210号道路, 神和镇旁", "211号道路", "212号道路, 家缘市旁", "212号道路, 野原市旁", "213号道路", "214号道路", "215号道路", "218号道路", "221号道路", "222号道路", "山谷发电厂", "百代森林", "多多罗钢铁厂", "花苑花田" });
             CB_TreeList.Location = new System.Drawing.Point(12, 42);
             CB_TreeList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             CB_TreeList.Name = "CB_TreeList";

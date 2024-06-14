@@ -27,7 +27,6 @@ public partial class SAV_BoxLayout : Form
         LB_BoxSelect.SelectedIndex = box;
         TB_BoxName.MaxLength = SAV.Generation switch
         {
-            2 when SAV is SAV2 { Japanese: false, Korean: false } => 8 * 2,
             6 or 7 => 14,
             >= 8 => 16,
             _ => 8,
@@ -55,7 +54,7 @@ public partial class SAV_BoxLayout : Form
         static void AddPlaceholder(ComboBox cb, int count)
         {
             for (int i = 1; i <= count; i++)
-                cb.Items.Add($"Wallpaper {i}");
+                cb.Items.Add($"±ÚÖ½ {i}");
         }
 
         var names = GameInfo.Strings.wallpapernames;
@@ -179,7 +178,7 @@ public partial class SAV_BoxLayout : Form
 
     private void B_Save_Click(object sender, EventArgs e)
     {
-        if (flagArr.Length != 0)
+        if (flagArr.Length > 0)
             SAV.BoxFlags = Array.ConvertAll(flagArr, i => (byte)i.Value);
         if (CB_Unlocked.Visible)
             SAV.BoxesUnlocked = CB_Unlocked.SelectedIndex;

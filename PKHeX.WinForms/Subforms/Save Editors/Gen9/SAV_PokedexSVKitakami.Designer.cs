@@ -181,35 +181,35 @@ namespace PKHeX.WinForms
             // 
             mnuSeenNone.Name = "mnuSeenNone";
             mnuSeenNone.Size = new System.Drawing.Size(149, 22);
-            mnuSeenNone.Text = "Seen none";
+            mnuSeenNone.Text = "从未见过";
             mnuSeenNone.Click += SeenNone;
             // 
             // mnuSeenAll
             // 
             mnuSeenAll.Name = "mnuSeenAll";
             mnuSeenAll.Size = new System.Drawing.Size(149, 22);
-            mnuSeenAll.Text = "Seen all";
+            mnuSeenAll.Text = "全部见过";
             mnuSeenAll.Click += SeenAll;
             // 
             // mnuCaughtNone
             // 
             mnuCaughtNone.Name = "mnuCaughtNone";
             mnuCaughtNone.Size = new System.Drawing.Size(149, 22);
-            mnuCaughtNone.Text = "Caught none";
+            mnuCaughtNone.Text = "从未捕获";
             mnuCaughtNone.Click += CaughtNone;
             // 
             // mnuCaughtAll
             // 
             mnuCaughtAll.Name = "mnuCaughtAll";
             mnuCaughtAll.Size = new System.Drawing.Size(149, 22);
-            mnuCaughtAll.Text = "Caught all";
+            mnuCaughtAll.Text = "全部捕获";
             mnuCaughtAll.Click += CaughtAll;
             // 
             // mnuComplete
             // 
             mnuComplete.Name = "mnuComplete";
             mnuComplete.Size = new System.Drawing.Size(149, 22);
-            mnuComplete.Text = "Complete Dex";
+            mnuComplete.Text = "完整的图鉴";
             mnuComplete.Click += CompleteDex;
             // 
             // mnuFormNone

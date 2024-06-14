@@ -665,22 +665,22 @@ public partial class SAVEditor : UserControl, ISlotViewer<PictureBox>, ISaveFile
         if (SAV is SAV9SV sv)
         {
             if (sender == B_Raids)
-                OpenDialog(new SAV_Raid9(sv, TeraRaidOrigin.Paldea));
+                OpenDialog(new SAV_Raid9(sv, TeraRaidOrigin.帕底亚));
             else if (sender == B_RaidsDLC1)
-                OpenDialog(new SAV_Raid9(sv, TeraRaidOrigin.Kitakami));
+                OpenDialog(new SAV_Raid9(sv, TeraRaidOrigin.北上乡));
             else if (sender == B_RaidsDLC2)
-                OpenDialog(new SAV_Raid9(sv, TeraRaidOrigin.BlueberryAcademy));
+                OpenDialog(new SAV_Raid9(sv, TeraRaidOrigin.蓝莓学院));
             else if (sender == B_RaidsSevenStar)
                 OpenDialog(new SAV_RaidSevenStar9(sv));
         }
         else if (SAV is SAV8SWSH swsh)
         {
             if (sender == B_Raids)
-                OpenDialog(new SAV_Raid8(swsh, MaxRaidOrigin.Galar));
+                OpenDialog(new SAV_Raid8(swsh, MaxRaidOrigin.迦勒尔));
             else if (sender == B_RaidsDLC1)
-                OpenDialog(new SAV_Raid8(swsh, MaxRaidOrigin.IsleOfArmor));
+                OpenDialog(new SAV_Raid8(swsh, MaxRaidOrigin.铠之孤岛));
             else if (sender == B_RaidsDLC2)
-                OpenDialog(new SAV_Raid8(swsh, MaxRaidOrigin.CrownTundra));
+                OpenDialog(new SAV_Raid8(swsh, MaxRaidOrigin.王冠雪原));
         }
     }
 

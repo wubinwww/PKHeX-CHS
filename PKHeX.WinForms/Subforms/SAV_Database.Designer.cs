@@ -890,7 +890,7 @@ namespace PKHeX.WinForms
             mnuView.Image = Properties.Resources.other;
             mnuView.Name = "mnuView";
             mnuView.Size = new System.Drawing.Size(107, 22);
-            mnuView.Text = "View";
+            mnuView.Text = "查看";
             mnuView.Click += ClickView;
             // 
             // mnuDelete
@@ -898,7 +898,7 @@ namespace PKHeX.WinForms
             mnuDelete.Image = Properties.Resources.nocheck;
             mnuDelete.Name = "mnuDelete";
             mnuDelete.Size = new System.Drawing.Size(107, 22);
-            mnuDelete.Text = "Delete";
+            mnuDelete.Text = "删除";
             mnuDelete.Click += ClickDelete;
             // 
             // TC_SearchSettings

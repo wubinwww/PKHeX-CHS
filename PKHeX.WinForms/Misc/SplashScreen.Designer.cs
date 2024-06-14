@@ -41,7 +41,7 @@ namespace PKHeX.WinForms
             L_Status.Name = "L_Status";
             L_Status.Size = new System.Drawing.Size(113, 15);
             L_Status.TabIndex = 0;
-            L_Status.Text = "Starting up PKHeX...";
+            L_Status.Text = "启动 PKHeX...";
             // 
             // L_Site
             // 
@@ -50,7 +50,7 @@ namespace PKHeX.WinForms
             L_Site.Name = "L_Site";
             L_Site.Size = new System.Drawing.Size(116, 15);
             L_Site.TabIndex = 1;
-            L_Site.Text = "ProjectPokemon.org";
+            L_Site.Text = "翻译者：污教授";
             // 
             // PB_Icon
             // 

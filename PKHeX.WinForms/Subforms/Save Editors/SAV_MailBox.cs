@@ -133,15 +133,35 @@ public partial class SAV_MailBox : Form
                 a.DataSource = new BindingSource(species, null);
             }
 
-            var vers = GameInfo.VersionDataSource
-                .Where(z => ((GameVersion)z.Value).GetGeneration() == Generation);
             CB_AuthorVersion.Items.Clear();
             CB_AuthorVersion.InitializeBinding();
-            CB_AuthorVersion.DataSource = new BindingSource(vers, null);
+            CB_AuthorVersion.DataSource = new BindingSource(Generation == 4
+                ? new[] {
+                    new ComboItem("钻石", (int)GameVersion.D),
+                    new ComboItem("珍珠", (int)GameVersion.P),
+                    new ComboItem("白金", (int)GameVersion.Pt),
+                    new ComboItem("心金", (int)GameVersion.HG),
+                    new ComboItem("魂银", (int)GameVersion.SS),
+                }
+                : new[] {
+                    new ComboItem("黑", (int)GameVersion.B),
+                    new ComboItem("白", (int)GameVersion.W),
+                    new ComboItem("黑2", (int)GameVersion.B2),
+                    new ComboItem("白2", (int)GameVersion.W2),
+                }, null);
 
             CB_AuthorLang.Items.Clear();
             CB_AuthorLang.InitializeBinding();
-            CB_AuthorLang.DataSource = new BindingSource(GameInfo.LanguageDataSource(SAV.Generation), null);
+            CB_AuthorLang.DataSource = new BindingSource(new[] {
+                // not sure
+                new ComboItem("JPN", 1),
+                new ComboItem("ENG", 2),
+                new ComboItem("FRE", 3),
+                new ComboItem("ITA", 4),
+                new ComboItem("GER", 5),
+                new ComboItem("ESP", 7),
+                new ComboItem("KOR", 8),
+            }, null);
         }
 
         var ItemList = GameInfo.Strings.GetItemStrings(SAV.Context, SAV.Version);
@@ -202,7 +222,7 @@ public partial class SAV_MailBox : Form
             if (isInit)
                 PKMLabels[i].Text = GetSpeciesNameFromCB(p[i].Species);
             int j = Array.IndexOf(MailItemID, p[i].HeldItem);
-            PKMHeldItems[i].Text = j >= 0 ? CB_MailType.Items[j + 1]!.ToString() : "(not Mail)";
+            PKMHeldItems[i].Text = j >= 0 ? CB_MailType.Items[j + 1]!.ToString() : "(非邮件)";
             if (Generation != 3)
                 continue;
             int k = ((PK3)p[i]).HeldMailID;

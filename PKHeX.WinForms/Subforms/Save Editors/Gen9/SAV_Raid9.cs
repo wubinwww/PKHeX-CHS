@@ -19,12 +19,12 @@ public partial class SAV_Raid9 : Form
         SAV = (SAV9SV)(Origin = sav).Clone();
         Raids = raidOrigin switch
         {
-            TeraRaidOrigin.Paldea => SAV.RaidPaldea,
-            TeraRaidOrigin.Kitakami => SAV.RaidKitakami,
-            TeraRaidOrigin.BlueberryAcademy => SAV.RaidBlueberry,
-            _ => throw new ArgumentOutOfRangeException($"Raid Origin {raidOrigin} is not valid for Scarlet and Violet")
+            TeraRaidOrigin.帕底亚 => SAV.RaidPaldea,
+            TeraRaidOrigin.北上乡 => SAV.RaidKitakami,
+            TeraRaidOrigin.蓝莓学院 => SAV.RaidBlueberry,
+            _ => throw new ArgumentOutOfRangeException($"团战出生 {raidOrigin} 不适用于朱和紫")
         };
-        CB_Raid.Items.AddRange(Enumerable.Range(1, Raids.CountUsed).Select(z => (object)$"Raid {z:000}").ToArray());
+        CB_Raid.Items.AddRange(Enumerable.Range(1, Raids.CountUsed).Select(z => (object)$"太晶洞窟 {z:000}").ToArray());
         CB_Raid.SelectedIndex = 0;
         LoadSeeds();
     }

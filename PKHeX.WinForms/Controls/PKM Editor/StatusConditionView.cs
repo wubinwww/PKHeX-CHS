@@ -58,9 +58,7 @@ public partial class StatusConditionView : UserControl
     private void SetStatus(StatusCondition status)
     {
         PB_Status.Image = status.GetStatusSprite();
-
-        var text = WinFormsTranslator.TranslateEnum(status, Main.CurrentLanguage);
-        Hover.SetToolTip(PB_Status, $"Status Condition: {text}");
+        Hover.SetToolTip(PB_Status, $"当前状态: {status}");
     }
 
     private void PB_Status_Click(object sender, EventArgs e)

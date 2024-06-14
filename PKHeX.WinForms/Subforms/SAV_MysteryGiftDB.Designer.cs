@@ -530,7 +530,7 @@ namespace PKHeX.WinForms
             mnuView.Image = Properties.Resources.other;
             mnuView.Name = "mnuView";
             mnuView.Size = new System.Drawing.Size(126, 22);
-            mnuView.Text = "View";
+            mnuView.Text = "查看";
             mnuView.Click += ClickView;
             // 
             // mnuSaveMG
@@ -538,7 +538,7 @@ namespace PKHeX.WinForms
             mnuSaveMG.Image = Properties.Resources.gift;
             mnuSaveMG.Name = "mnuSaveMG";
             mnuSaveMG.Size = new System.Drawing.Size(126, 22);
-            mnuSaveMG.Text = "Save Gift";
+            mnuSaveMG.Text = "保存礼物";
             mnuSaveMG.Click += ClickSaveMG;
             // 
             // mnuSavePK
@@ -546,7 +546,7 @@ namespace PKHeX.WinForms
             mnuSavePK.Image = Properties.Resources.savePKM;
             mnuSavePK.Name = "mnuSavePK";
             mnuSavePK.Size = new System.Drawing.Size(126, 22);
-            mnuSavePK.Text = "Save PKM";
+            mnuSavePK.Text = "保存PKM";
             mnuSavePK.Click += ClickSavePK;
             // 
             // TC_SearchSettings

@@ -83,7 +83,7 @@ public partial class SAV_Trainer : Form
 
         var names = WinFormsTranslator.GetEnumTranslation<TrainerSprite6>(Main.CurrentLanguage);
         var values = Enum.GetValues<TrainerSprite6>();
-        var max = SAV is not SAV6AO ? (int)TrainerSprite6.Trevor : names.Length;
+        var max = SAV is not SAV6AO ? (int)TrainerSprite6.多罗巴 : names.Length;
         var data = new ComboItem[max];
         for (int i = 0; i < max; i++)
             data[i] = new ComboItem(names[i], (int)values[i]);

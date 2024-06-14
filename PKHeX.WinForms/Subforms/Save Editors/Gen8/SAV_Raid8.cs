@@ -18,12 +18,12 @@ public partial class SAV_Raid8 : Form
         SAV = (SAV8SWSH)(Origin = sav).Clone();
         Raids = raidOrigin switch
         {
-            MaxRaidOrigin.Galar => SAV.RaidGalar,
-            MaxRaidOrigin.IsleOfArmor => SAV.RaidArmor,
-            MaxRaidOrigin.CrownTundra => SAV.RaidCrown,
-            _ => throw new ArgumentOutOfRangeException($"Raid Origin {raidOrigin} is not valid for Sword and Shield")
+            MaxRaidOrigin.迦勒尔 => SAV.RaidGalar,
+            MaxRaidOrigin.铠之孤岛 => SAV.RaidArmor,
+            MaxRaidOrigin.王冠雪原 => SAV.RaidCrown,
+            _ => throw new ArgumentOutOfRangeException($"团战出生 {raidOrigin} 不适用于剑与盾")
         };
-        CB_Den.Items.AddRange(Enumerable.Range(1, Raids.CountUsed).Select(z => (object)$"Den {z:000}").ToArray());
+        CB_Den.Items.AddRange(Enumerable.Range(1, Raids.CountUsed).Select(z => (object)$"极巨巢穴 {z:000}").ToArray());
         CB_Den.SelectedIndex = 0;
     }
 

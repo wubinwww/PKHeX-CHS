@@ -95,7 +95,7 @@ public partial class SAV_Encounters : Form
         GetTypeFilters();
 
         // Load Data
-        L_Count.Text = "Ready...";
+        L_Count.Text = "读取中...";
 
         CenterToParent();
     }
