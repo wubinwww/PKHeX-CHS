@@ -51,7 +51,7 @@ public sealed class SAV4DP : SAV4Sinnoh
     protected override int EventWork => 0xD9C;
     protected override int EventFlag => 0xFDC;
     protected override int DaycareOffset => 0x141C;
-    public override BattleFrontierFacility4 MaxFacility => BattleFrontierFacility4.Tower;
+    public override BattleFrontierFacility4 MaxFacility => BattleFrontierFacility4.塔;
 
     private void GetSAVOffsets()
     {

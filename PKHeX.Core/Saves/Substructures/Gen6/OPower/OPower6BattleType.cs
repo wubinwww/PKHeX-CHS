@@ -1,13 +1,13 @@
-﻿namespace PKHeX.Core;
+namespace PKHeX.Core;
 
 public enum OPower6BattleType : byte
 {
-    Attack = 0,
-    Defense = 1,
-    Sp_Attack = 2,
-    Sp_Defense = 3,
-    Speed = 4,
-    Critical = 5,
-    Accuracy = 6,
+    攻击之力 = 0,
+    防御之力 = 1,
+    特攻之力 = 2,
+    特防之力 = 3,
+    速度之力 = 4,
+    要害之力 = 5,
+    命中之力 = 6,
     Count = 7,
 }

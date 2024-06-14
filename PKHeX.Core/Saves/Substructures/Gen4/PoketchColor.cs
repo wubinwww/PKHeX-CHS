@@ -2,12 +2,12 @@ namespace PKHeX.Core;
 
 public enum PoketchColor
 {
-    Green = 0,
-    Yellow = 1,
-    Orange = 2,
-    Red = 3,
-    Purple = 4,
-    Blue = 5,
-    Turquoise = 6,
-    White = 7,
+    绿色 = 0,
+    黄色 = 1,
+    橙色 = 2,
+    红色 = 3,
+    紫色 = 4,
+    蓝色 = 5,
+    青色 = 6,
+    白色 = 7,
 }

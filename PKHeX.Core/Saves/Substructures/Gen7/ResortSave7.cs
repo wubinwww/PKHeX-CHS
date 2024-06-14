@@ -62,21 +62,21 @@ public sealed class ResortSave7(SAV7 sav, Memory<byte> raw) : SaveBlock<SAV7>(sa
         for (int i = 0; i < colors.Length; i++)
         {
             var z = colors[i];
-            beans[i] = $"{z} Bean";
-            beans[i + colors.Length] = $"{z} Patterned Bean";
+            beans[i] = $"{z} 宝可豆";
+            beans[i + colors.Length] = $"{z} 花纹宝可豆";
         }
-        beans[^1] = "Rainbow Bean";
+        beans[^1] = "虹色宝可豆";
         return beans;
     }
 }
 
 public enum BeanColor7 : byte
 {
-    Red,
-    Blue,
-    LightBlue,
-    Green,
-    Yellow,
-    Purple,
-    Orange,
+    红色,
+    蓝色,
+    浅蓝色,
+    绿色,
+    黄色,
+    紫色,
+    橙色,
 }

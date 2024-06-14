@@ -58,7 +58,7 @@ public sealed class SAV4HGSS : SAV4, IBoxDetailName, IBoxDetailWallpaper
     protected override int EventFlag => 0x10C4;
     protected override int DaycareOffset => 0x15FC;
     public override MysteryBlock4HGSS Mystery { get; }
-    public override BattleFrontierFacility4 MaxFacility => BattleFrontierFacility4.Arcade;
+    public override BattleFrontierFacility4 MaxFacility => BattleFrontierFacility4.轮盘;
 
     private void GetSAVOffsets()
     {
@@ -208,7 +208,7 @@ public sealed class SAV4HGSS : SAV4, IBoxDetailName, IBoxDetailWallpaper
     }
 
     private const int OFS_GearRolodex = 0xC0EC;
-    private const byte GearMaxCallers = (byte)(PokegearNumber.Ernest + 1);
+    private const byte GearMaxCallers = (byte)(PokegearNumber.暴走族肇顺 + 1);
 
     public PokegearNumber GetCallerAtIndex(int index) => (PokegearNumber)General[OFS_GearRolodex + index];
     public void SetCallerAtIndex(int index, PokegearNumber caller) => General[OFS_GearRolodex + index] = (byte)caller;
@@ -235,22 +235,22 @@ public sealed class SAV4HGSS : SAV4, IBoxDetailName, IBoxDetailWallpaper
     public void PokeGearClearAllCallers(int start = 0)
     {
         var dex = GetPokeGearRoloDex();
-        dex[start..].Fill(PokegearNumber.None);
+        dex[start..].Fill(PokegearNumber.无);
     }
 
     private static ReadOnlySpan<PokegearNumber> NotTrainers =>
     [
-        PokegearNumber.Mother,
-        PokegearNumber.Professor_Elm,
-        PokegearNumber.Professor_Oak,
-        PokegearNumber.Ethan,
-        PokegearNumber.Lyra,
-        PokegearNumber.Kurt,
-        PokegearNumber.Daycare_Man,
-        PokegearNumber.Daycare_Lady,
-        PokegearNumber.Bill,
-        PokegearNumber.Bike_Shop,
-        PokegearNumber.Baoba,
+        PokegearNumber.妈妈,
+        PokegearNumber.空木博士,
+        PokegearNumber.大木博士,
+        PokegearNumber.阿响,
+        PokegearNumber.琴音,
+        PokegearNumber.钢铁,
+        PokegearNumber.培育屋老爷爷,
+        PokegearNumber.培育屋老奶奶,
+        PokegearNumber.正辉,
+        PokegearNumber.自行车店,
+        PokegearNumber.巴奥巴,
     ];
 
     public void PokeGearUnlockAllCallersNoTrainers()

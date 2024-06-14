@@ -2,91 +2,91 @@ namespace PKHeX.Core;
 
 public enum OPower6Index : byte
 {
-    Enable = 0,
+    激活 = 0,
 
-    Hatching1 = 1,
-    Hatching2 = 2,
-    Hatching3 = 3,
-    HatchingS = 4,
-    HatchingMAX = 5,
+    孵蛋之力1 = 1,
+    孵蛋之力2 = 2,
+    孵蛋之力3 = 3,
+    孵蛋之力S = 4,
+    孵蛋之力MAX = 5,
 
-    Bargain1 = 6,
-    Bargain2 = 7,
-    Bargain3 = 8,
-    BargainS = 9,
-    BargainMAX = 10,
+    优惠之力1 = 6,
+    优惠之力2 = 7,
+    优惠之力3 = 8,
+    优惠之力S = 9,
+    优惠之力MAX = 10,
 
-    PrizeMoney1 = 11,
-    PrizeMoney2 = 12,
-    PrizeMoney3 = 13,
-    PrizeMoneyS = 14,
-    PrizeMoneyMAX = 15,
+    零花钱之力1 = 11,
+    零花钱之力2 = 12,
+    零花钱之力3 = 13,
+    零花钱之力S = 14,
+    零花钱之力MAX = 15,
 
-    Experience1 = 16,
-    Experience2 = 17,
-    Experience3 = 18,
-    ExperienceS = 19,
-    ExperienceMAX = 20,
+    经验之力1 = 16,
+    经验之力2 = 17,
+    经验之力3 = 18,
+    经验之力S = 19,
+    经验之力MAX = 20,
 
-    Capture1 = 21,
-    Capture2 = 22,
-    Capture3 = 23,
-    CaptureS = 24,
-    CaptureMAX = 25,
+    捕获之力1 = 21,
+    捕获之力2 = 22,
+    捕获之力3 = 23,
+    捕获之力S = 24,
+    捕获之力MAX = 25,
 
-    Encounter1 = 26,
-    Encounter2 = 27,
-    Encounter3 = 28,
+    相遇之力1 = 26,
+    相遇之力2 = 27,
+    相遇之力3 = 28,
 
-    Stealth1 = 29,
-    Stealth2 = 30,
-    Stealth3 = 31,
+    隐身之力1 = 29,
+    隐身之力2 = 30,
+    隐身之力3 = 31,
 
-    HPRestoring1 = 32,
-    HPRestoring2 = 33,
-    HPRestoring3 = 34,
+    HP回复之力1 = 32,
+    HP回复之力2 = 33,
+    HP回复之力3 = 34,
 
-    PPRestoring1 = 35,
-    PPRestoring2 = 36,
-    PPRestoring3 = 37,
+    PP回复之力1 = 35,
+    PP回复之力2 = 36,
+    PP回复之力3 = 37,
 
-    FullRecovery = 38,
+    完全回复之力 = 38,
 
-    Befriending1 = 39,
-    Befriending2 = 40,
-    Befriending3 = 41,
-    BefriendingS = 42,
-    BefriendingMAX = 43,
+    亲密之力1 = 39,
+    亲密之力2 = 40,
+    亲密之力3 = 41,
+    亲密之力S = 42,
+    亲密之力MAX = 43,
 
-    Attack1 = 44,
-    Attack2 = 45,
-    Attack3 = 46,
+    攻击之力1 = 44,
+    攻击之力2 = 45,
+    攻击之力3 = 46,
 
-    Defense1 = 47,
-    Defense2 = 48,
-    Defense3 = 49,
+    防御之力1 = 47,
+    防御之力2 = 48,
+    防御之力3 = 49,
 
-    SpecialAttack1 = 50,
-    SpecialAttack2 = 51,
-    SpecialAttack3 = 52,
+    特攻之力1 = 50,
+    特攻之力2 = 51,
+    特攻之力3 = 52,
 
-    SpecialDefense1 = 53,
-    SpecialDefense2 = 54,
-    SpecialDefense3 = 55,
+    特防之力1 = 53,
+    特防之力2 = 54,
+    特防之力3 = 55,
 
-    Speed1 = 56,
-    Speed2 = 57,
-    Speed3 = 58,
+    速度之力1 = 56,
+    速度之力2 = 57,
+    速度之力3 = 58,
 
-    Critical1 = 59,
-    Critical2 = 60,
-    Critical3 = 61,
+    要害之力1 = 59,
+    要害之力2 = 60,
+    要害之力3 = 61,
 
-    Accuracy1 = 62,
-    Accuracy2 = 63,
-    Accuracy3 = 64,
+    命中之力1 = 62,
+    命中之力2 = 63,
+    命中之力3 = 64,
 
-    Count = 65,
+    计数 = 65,
 }
 
 public static class OPowerTypeExtensions
@@ -94,23 +94,23 @@ public static class OPowerTypeExtensions
     public static OPower6FieldType GetFieldType(this OPower6Index index) => index switch
     {
         0 => OPower6FieldType.Count, // Invalid
-        <= OPower6Index.HatchingMAX    => OPower6FieldType.Hatching,
-        <= OPower6Index.BargainMAX     => OPower6FieldType.Bargain,
-        <= OPower6Index.PrizeMoneyMAX  => OPower6FieldType.PrizeMoney,
-        <= OPower6Index.ExperienceMAX  => OPower6FieldType.Experience,
-        <= OPower6Index.CaptureMAX     => OPower6FieldType.Capture,
-        <= OPower6Index.Encounter3     => OPower6FieldType.Encounter,
-        <= OPower6Index.Stealth3       => OPower6FieldType.Stealth,
-        <= OPower6Index.HPRestoring3   => OPower6FieldType.HPRestoring,
-        <= OPower6Index.PPRestoring3   => OPower6FieldType.PPRestoring,
-           OPower6Index.FullRecovery   => OPower6FieldType.Count, // Invalid
-        <= OPower6Index.BefriendingMAX => OPower6FieldType.Befriending,
+        <= OPower6Index.孵蛋之力MAX => OPower6FieldType.孵蛋之力,
+        <= OPower6Index.优惠之力MAX => OPower6FieldType.优惠之力,
+        <= OPower6Index.零花钱之力MAX => OPower6FieldType.零花钱之力,
+        <= OPower6Index.经验之力MAX => OPower6FieldType.经验之力,
+        <= OPower6Index.捕获之力MAX => OPower6FieldType.捕获之力,
+        <= OPower6Index.相遇之力3 => OPower6FieldType.相遇之力,
+        <= OPower6Index.隐身之力3 => OPower6FieldType.隐身之力,
+        <= OPower6Index.HP回复之力3 => OPower6FieldType.HP回复之力,
+        <= OPower6Index.PP回复之力3 => OPower6FieldType.PP回复之力,
+           OPower6Index.完全回复之力 => OPower6FieldType.Count, // Invalid
+        <= OPower6Index.亲密之力MAX => OPower6FieldType.亲密之力,
         _ => OPower6FieldType.Count, // Invalid
     };
 
     public static OPower6BattleType GetBattleType(this OPower6Index index) => index switch
     {
-        >= OPower6Index.Attack1 and <= OPower6Index.Accuracy3 => (OPower6BattleType)((index - OPower6Index.Attack1) / 3),
+        >= OPower6Index.攻击之力1 and <= OPower6Index.命中之力3 => (OPower6BattleType)((index - OPower6Index.攻击之力1) / 3),
         _ => OPower6BattleType.Count, // Invalid
     };
 }

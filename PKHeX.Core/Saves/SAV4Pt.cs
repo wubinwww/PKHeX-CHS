@@ -50,7 +50,7 @@ public sealed class SAV4Pt : SAV4Sinnoh
     protected override int EventFlag => 0xFEC;
     private const int OffsetMystery = 0xB4C0;
     protected override int DaycareOffset => 0x1654;
-    public override BattleFrontierFacility4 MaxFacility => BattleFrontierFacility4.Arcade;
+    public override BattleFrontierFacility4 MaxFacility => BattleFrontierFacility4.塔;
 
     private const int OFS_ToughWord = 0xCEB4;
     private const int OFS_VillaFurniture = 0x111F;

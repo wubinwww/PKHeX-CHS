@@ -2,12 +2,12 @@ namespace PKHeX.Core;
 
 public enum PlayerSkinColor7
 {
-    PaleM = 0,
-    PaleF = 1,
-    DefaultM = 2,
-    DefaultF = 3,
-    TanM = 4,
-    TanF = 5,
-    DarkM = 6,
-    DarkF = 7,
+    男白肤色,
+    女白肤色,
+    男默认肤色,
+    女默认肤色,
+    男小麦肤色,
+    女小麦肤色,
+    男黑肤色,
+    女黑肤色,
 }

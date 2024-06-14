@@ -82,14 +82,14 @@ public sealed class TeraRaidDetail(Memory<byte> Data)
     private const string General = nameof(General);
     private const string Misc = nameof(Misc);
 
-    [Category(General), Description("Indicates if this entry has an active raid crystal.")]
+    [Category(General), Description("指示此项是否是有活动的团战晶体.")]
     public bool IsEnabled
     {
         get => ReadUInt32LittleEndian(Span) != 0;
         set => WriteUInt32LittleEndian(Span, value ? 1u : 0);
     }
 
-    [Category(General), Description("Zone the raid crystal is located in.")]
+    [Category(General), Description("团战晶体所在区域.")]
     [RefreshProperties(RefreshProperties.All)]
     public uint AreaID
     {
@@ -97,7 +97,7 @@ public sealed class TeraRaidDetail(Memory<byte> Data)
         set => WriteUInt32LittleEndian(Span[0x04..], value);
     }
 
-    [Category(Misc), Description("Indicates which group the crystal belongs to.")]
+    [Category(Misc), Description("指示晶体如何出现在玩家的地图上.")]
     [RefreshProperties(RefreshProperties.All)]
     public uint LotteryGroup
     {
@@ -105,7 +105,7 @@ public sealed class TeraRaidDetail(Memory<byte> Data)
         set => WriteUInt32LittleEndian(Span[0x08..], value);
     }
 
-    [Category(General), Description("Random crystal choice from the area and lottery group.")]
+    [Category(General), Description("团战晶体的特定区域过载点.")]
     [RefreshProperties(RefreshProperties.All)]
     public uint SpawnPointID
     {
@@ -113,30 +113,30 @@ public sealed class TeraRaidDetail(Memory<byte> Data)
         set => WriteUInt32LittleEndian(Span[0x0C..], value);
     }
 
-    public string ScenePointName => $"Raid_Point_{AreaID}_{LotteryGroup}_{SpawnPointID}";
+    public string ScenePointName => $"团战_指向_{AreaID}_{LotteryGroup}_{SpawnPointID}";
 
-    [Category(General), Description("RNG Seed (32bit) for fetching the raid data table and generating the raid."), TypeConverter(typeof(TypeConverterU32))]
+    [Category(General), Description("RNG种子（32位），用于获取团战数据表并生成团战."), TypeConverter(typeof(TypeConverterU32))]
     public uint Seed
     {
         get => ReadUInt32LittleEndian(Span[0x10..]);
         set => WriteUInt32LittleEndian(Span[0x10..], value);
     }
 
-    [Category(Misc), Description("Always zero.")]
+    [Category(Misc), Description("始终为零.")]
     public uint Unused
     {
         get => ReadUInt32LittleEndian(Span[0x14..]);
         set => WriteUInt32LittleEndian(Span[0x14..], value);
     }
 
-    [Category(General), Description("Indicates the source of the raid encounter data and rewards.")]
+    [Category(General), Description("指示团战遭遇数据和奖励的来源.")]
     public TeraRaidContentType Content
     {
         get => (TeraRaidContentType)ReadUInt32LittleEndian(Span[0x18..]);
         set => WriteUInt32LittleEndian(Span[0x18..], (uint)value);
     }
 
-    [Category(Misc), Description("Has player already collected the League Points for this raid?")]
+    [Category(Misc), Description("玩家已经收集了这次团战的联盟点数了吗？")]
     public bool IsClaimedLeaguePoints
     {
         get => ReadUInt32LittleEndian(Span[0x1C..]) != 0;
@@ -146,15 +146,15 @@ public sealed class TeraRaidDetail(Memory<byte> Data)
 
 public enum TeraRaidContentType : uint
 {
-    Base05,
-    Black6,
-    Distribution,
-    Might7,
+    一至五星,
+    六星,
+    分配,
+    七星,
 }
 
 public enum TeraRaidOrigin : uint
 {
-    Paldea,
-    Kitakami,
-    BlueberryAcademy
+    帕底亚,
+    北上乡,
+    蓝莓学院
 }

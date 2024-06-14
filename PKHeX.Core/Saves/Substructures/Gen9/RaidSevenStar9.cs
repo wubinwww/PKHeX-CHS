@@ -27,7 +27,7 @@ public sealed class SevenStarRaidDetail(SevenStarRaidCapturedDetail captured, Se
 {
     private const string General = nameof(General);
 
-    [Category(General), Description("Identifier used for this 7 Star Raid. Matches the date this raid was first distributed.")]
+    [Category(General), Description("用于此七星团体战的活动时间。需与这次活动的首次发布日期相符.")]
     public uint Identifier
     {
         get => captured.Identifier;
@@ -39,14 +39,14 @@ public sealed class SevenStarRaidDetail(SevenStarRaidCapturedDetail captured, Se
         }
     }
 
-    [Category(General), Description("Indicates if this Tera Raid Boss has been captured by the player.")]
+    [Category(General), Description("指示玩家是否已捕获此太晶团体战Boss.")]
     public bool Captured
     {
         get => captured.Captured;
         set => captured.Captured = value;
     }
 
-    [Category(General), Description("Indicates if this Tera Raid Boss has been defeated at least once by the player.")]
+    [Category(General), Description("指示此太晶团体战Boss是否至少被玩家击败过一次.")]
     public bool Defeated
     {
         get => defeated?.Defeated ?? captured.Defeated;
@@ -56,7 +56,7 @@ public sealed class SevenStarRaidDetail(SevenStarRaidCapturedDetail captured, Se
                 defeated.Defeated = value;
             else
                 captured.Defeated = value;
-        }
+        } 
     }
 }
 
